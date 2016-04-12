@@ -1,50 +1,34 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".activities.StartActivity">
+
     <LinearLayout android:id="@+id/layout_start_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical|center_horizontal|center"
         android:orientation="vertical"
         android:gravity="center_vertical" >
-        <ListView android:id="@+id/list_probes"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </ListView>
-        <LinearLayout android:id="@+id/logo_view"
+
+        <RelativeLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff">
-            <View android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-            <LinearLayout android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <View android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_weight="1" />
-                <ImageView
-                    android:src="@drawable/laptop"
-                    android:layout_width="151dp"
-                    android:layout_height="151dp"
-                    android:scaleType="centerCrop"
-                    android:contentDescription="@string/app_name" />
-                <View android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_weight="1" />
-            </LinearLayout>
-            <View android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-        </LinearLayout>
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"/>
+
+        </RelativeLayout>
     </LinearLayout>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_marginTop="0dp"
-        android:layout_height="8dp"
-        android:layout_gravity="top"
-        android:background="@drawable/shadow" />
 </FrameLayout>
 

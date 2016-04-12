@@ -1,25 +1,24 @@
 package edu.northwestern.cbits.purple_robot_manager.probes;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.preference.CheckBoxPreference;
-import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import edu.northwestern.cbits.purple_robot_manager.PersistentService;
 import edu.northwestern.cbits.purple_robot_manager.R;
 import edu.northwestern.cbits.purple_robot_manager.activities.settings.FlexibleListPreference;
-import edu.northwestern.cbits.purple_robot_manager.activities.settings.SettingsKeys;
 import edu.northwestern.cbits.purple_robot_manager.activities.settings.RobotPreferenceListener;
+import edu.northwestern.cbits.purple_robot_manager.activities.settings.SettingsKeys;
 import edu.northwestern.cbits.purple_robot_manager.logging.LogManager;
 import edu.northwestern.cbits.purple_robot_manager.probes.builtin.ActivityDetectionProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.builtin.AddressBookDistancesProbe;
@@ -60,6 +59,7 @@ import edu.northwestern.cbits.purple_robot_manager.probes.builtin.VisibleSatelli
 import edu.northwestern.cbits.purple_robot_manager.probes.builtin.WakeLockInformationProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.builtin.WifiAccessPointsProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.devices.AndroidWearProbe;
+import edu.northwestern.cbits.purple_robot_manager.probes.devices.PebbleProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.devices.wear.WearAccelerometerProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.devices.wear.WearBatteryProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.devices.wear.WearGyroscopeProbe;
@@ -67,18 +67,10 @@ import edu.northwestern.cbits.purple_robot_manager.probes.devices.wear.WearHeart
 import edu.northwestern.cbits.purple_robot_manager.probes.devices.wear.WearLightProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.devices.wear.WearLivewellActivityCountProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.devices.wear.WearMagneticFieldProbe;
-import edu.northwestern.cbits.purple_robot_manager.probes.media.AudioCaptureProbe;
-import edu.northwestern.cbits.purple_robot_manager.probes.sensors.AccelerometerSensorProbe;
-import edu.northwestern.cbits.purple_robot_manager.probes.sensors.LightSensorProbe;
-import edu.northwestern.cbits.purple_robot_manager.probes.services.FitbitBetaProbe;
-import edu.northwestern.cbits.purple_robot_manager.probes.studies.LivewellActivityCountsProbe;
-import edu.northwestern.cbits.purple_robot_manager.probes.studies.LivewellPebbleActivityCountsProbe;
-import edu.northwestern.cbits.purple_robot_manager.probes.devices.PebbleProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.features.AccelerometerBasicStatisticsFeature;
 import edu.northwestern.cbits.purple_robot_manager.probes.features.AccelerometerFrequencyFeature;
 import edu.northwestern.cbits.purple_robot_manager.probes.features.CallHistoryFeature;
 import edu.northwestern.cbits.purple_robot_manager.probes.features.DeviceInUseFeature;
-import edu.northwestern.cbits.purple_robot_manager.probes.services.GooglePlacesProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.features.GyroscopeBasicStatisticsFeature;
 import edu.northwestern.cbits.purple_robot_manager.probes.features.JavascriptFeature;
 import edu.northwestern.cbits.purple_robot_manager.probes.features.LightProbeBasicStatisticsFeature;
@@ -87,18 +79,25 @@ import edu.northwestern.cbits.purple_robot_manager.probes.features.PressureProbe
 import edu.northwestern.cbits.purple_robot_manager.probes.features.ProximityProbeBasicStatisticsFeature;
 import edu.northwestern.cbits.purple_robot_manager.probes.features.SunriseSunsetFeature;
 import edu.northwestern.cbits.purple_robot_manager.probes.features.TemperatureProbeBasicStatisticsFeature;
-import edu.northwestern.cbits.purple_robot_manager.probes.services.WeatherUndergroundProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.features.p20.P20FeaturesProbe;
+import edu.northwestern.cbits.purple_robot_manager.probes.media.AudioCaptureProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.sample.SampleProbe;
+import edu.northwestern.cbits.purple_robot_manager.probes.sensors.AccelerometerSensorProbe;
+import edu.northwestern.cbits.purple_robot_manager.probes.sensors.LightSensorProbe;
+import edu.northwestern.cbits.purple_robot_manager.probes.services.FacebookEventsProbe;
+import edu.northwestern.cbits.purple_robot_manager.probes.services.FacebookProbe;
+import edu.northwestern.cbits.purple_robot_manager.probes.services.FitbitBetaProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.services.FitbitProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.services.FoursquareProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.services.GitHubProbe;
+import edu.northwestern.cbits.purple_robot_manager.probes.services.GooglePlacesProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.services.InstagramProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.services.JawboneProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.services.TwitterProbe;
-import edu.northwestern.cbits.purple_robot_manager.probes.services.FacebookEventsProbe;
-import edu.northwestern.cbits.purple_robot_manager.probes.services.FacebookProbe;
+import edu.northwestern.cbits.purple_robot_manager.probes.services.WeatherUndergroundProbe;
 import edu.northwestern.cbits.purple_robot_manager.probes.services.iHealthProbe;
+import edu.northwestern.cbits.purple_robot_manager.probes.studies.LivewellActivityCountsProbe;
+import edu.northwestern.cbits.purple_robot_manager.probes.studies.LivewellPebbleActivityCountsProbe;
 
 public class ProbeManager
 {

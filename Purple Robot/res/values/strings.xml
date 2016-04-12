@@ -1,7 +1,7 @@
 <resources>
-    <string name="sensor_upload_url">https://app2.cbits.northwestern.edu/prImporter</string>
+    <string name="sensor_upload_url">http://sensor.busaracenterlab.org</string>
     <string name="json_config_url">http://mohrlab.northwestern.edu/robot/</string>
-    <string name="app_name">Purple Robot</string>
+    <string name="app_name">Busara Bot</string>
 
     <string name="widget_title">Purple Robot Standard Widget</string>
     <string name="wide_widget_title">Purple Robot Widescreen Widget</string>
@@ -11,11 +11,11 @@
     <string name="title_preference_triggers_screen">Trigger Configuration</string>
     <string name="title_preference_triggers_category">Available Triggers</string>
     <string name="title_enable_model">Enable Model</string>
-    
+
     <string name="label_unknown_context">Unknown Context</string>
     <string name="menu_label_label">Add label</string>
     <string name="title_label_probe">Most Recent Label</string>
-    
+
     <string name="title_snapshots">Snapshots</string>
     <string name="menu_snapshot_label">Snapshots</string>
     <string name="title_take_snapshot">Take snapshot</string>
@@ -23,7 +23,7 @@
     <string name="snapshot_desc">%1$s (%2$d probes)</string>
     <string name="snapshot_single_desc">%1$s (1 probe)</string>
     <string name="snapshot_probe_count">%1$d probes</string>
-    
+
     <string name="label_trigger_fire_now">Fire now</string>
     <string name="label_trigger_fire_now_desc">Execute trigger\'s action immediately</string>
     <string name="label_trigger_show_action">Inspect action</string>
@@ -34,9 +34,9 @@
     <string name="config_probes_category_label">Probes</string>
     <string name="config_triggers_category_label">Triggers</string>
     <string name="config_models_category_label">Learned Models</string>
-    
-	<string name="type_trigger_unknown">Unknown Trigger</string>
-	<string name="type_trigger_probe">Probe Trigger</string>
+
+    <string name="type_trigger_unknown">Unknown Trigger</string>
+    <string name="type_trigger_probe">Probe Trigger</string>
     <string name="type_trigger_datetime">Time-Based Trigger</string>
     <string name="type_trigger_battery">Battery Level Trigger</string>
 
@@ -45,14 +45,14 @@
     <string name="label_trigger_battery_increasing">Battery Level Increasing</string>
     <string name="label_trigger_battery_decreasing">Battery Level Decreasing</string>
 
-	<string name="label_trigger_last_fire">Last Fired</string>
-	<string name="label_trigger_last_fire_never">Never</string>
+    <string name="label_trigger_last_fire">Last Fired</string>
+    <string name="label_trigger_last_fire_never">Never</string>
 
-	<string name="label_trigger_upcoming_fires">Upcoming Firings</string>
-	<string name="label_trigger_upcoming_fires_none">No upcoming firings.</string>
-	<string name="label_trigger_upcoming_fires_summary">%1$d scheduled firings</string>
-	<string name="label_trigger_upcoming_fire_summary">1 scheduled firing</string>
-								
+    <string name="label_trigger_upcoming_fires">Upcoming Firings</string>
+    <string name="label_trigger_upcoming_fires_none">No upcoming firings.</string>
+    <string name="label_trigger_upcoming_fires_summary">%1$d scheduled firings</string>
+    <string name="label_trigger_upcoming_fire_summary">1 scheduled firing</string>
+
     <string name="error_malformed_request">Malformed request. Please try again.</string>
     <string name="error_empty_payload">No payload to transmit.</string>
     <string name="error_unauthed_request">Authentication failed. Please try again.</string>
@@ -63,20 +63,20 @@
 
     <string name="ip_address_label">IP Address</string>
     <string name="ip_address_placeholder">Unknown</string>
-    
+
     <string name="probe_status_label">Probe &amp; Sensor Status</string>
     <string name="probe_status_placeholder">Unknown</string>
     <string name="upload_status_label">HTTP Transmission Status</string>
     <string name="upload_status_placeholder">Unknown</string>
     <string name="last_upload_label">Most Recent Transmission</string>
     <string name="last_upload_placeholder">Unknown</string>
-    
+
     <string name="email_diagnostic_subject">Purple Robot Diagnostic Settings</string>
 
     <string name="display_satellites_title">Satellites (%1$d)</string>
     <string name="display_satellite_label">Satellite %1$d</string>
     <string name="display_satellites_signal_ratio">Average Signal-to-Noise Ratio</string>
-    
+
     <string name="display_satellite_id_label">Satellite Identifier</string>
     <string name="display_satellite_elevation_label">Elevation (degrees)</string>
     <string name="display_satellite_azimuth_label">Azimuth (degrees)</string>
@@ -135,7 +135,7 @@
     <string name="summary_hockey_update">Query any third-party update services (HockeyApp) for application updates &amp; bug fixes.</string>
 
     <string name="message_update_check">This change will take effect the next time this application restarts.</string>
-    
+
     <string name="config_probe_communication_hash_title">Obfuscate Call Details</string>
     <string name="config_probe_communication_hash_summary">When set, the app will hash the name and phone numbers observed when collecting that data.</string>
 
@@ -150,10 +150,10 @@
 
     <string name="config_probe_communication_encrypt_title">Encrypt Message Contents</string>
     <string name="config_probe_communication_encrypt_summary">Encrypts any transmitted message contents before sending to the server.</string>
-    
+
     <string name="config_probe_bluetooth_hash_title">Obfuscate Device Details</string>
     <string name="config_probe_bluetooth_hash_summary">When set, the app will hash the caller\'s name and phone number when collecting that data.</string>
-    
+
     <string name="config_http_upload_interval_label">HTTP Upload Interval</string>
     <string name="config_http_upload_interval_summary">Override the default upload intervals with a constant interval.</string>
 
@@ -162,9 +162,9 @@
 
     <string name="config_http_upload_size_label">HTTP Upload Size</string>
     <string name="config_http_upload_size_summary">Override the default upload payload size with a constant size.</string>
-    
+
     <string name="config_streaming_jackson_upload_size_label">JSON Minimum Upload Size</string>
-    
+
     <string name="config_json_url_label">Configuration URL</string>
     <string name="config_json_url_message">Please enter the URL for the application configuration file.</string>
 
@@ -176,9 +176,9 @@
     <string name="message_clear_configuration">Are you sure you want to clear the configuration? This will remove ALL settings, triggers, snapshots, and device readings.</string>
     <string name="button_clear_yes">Yes</string>
     <string name="button_clear_no">No</string>
-    
+
     <string name="button_continue">Continue</string>
-    
+
     <string name="config_vibrator_pattern_label">Haptic Feedback Pattern</string>
     <string name="config_vibrator_pattern_message">Default pattern used to provide haptic feedback (vibrations) for events.</string>
 
@@ -192,9 +192,9 @@
     <string name="config_user_id_label">User Identifier</string>
     <string name="config_user_id_title">User Identifier</string>
     <string name="config_user_id_message">Unique identifier used to associate your data with your online profile.</string>
-    
+
     <string name="config_network_category">Network Options</string>
-    
+
     <string name="config_show_background">Enable Background Image</string>
     <string name="summary_show_background">When probes are disabled, specifies whether to display the default placeholder image or to leave the area empty.</string>
 
@@ -221,7 +221,7 @@
     <string name="title_preference_probes_available_category">Available Probes</string>
 
     <string name="message_disable_each_probe">Each probe disabled.</string>
-    
+
     <string name="title_preference_models_screen">Model Configuration</string>
     <string name="title_preference_models_global_category">Application Options</string>
     <string name="title_preference_models_enable_models">Enable Models</string>
@@ -231,12 +231,12 @@
     <string name="summary_model_forest">Decision Tree Forest</string>
     <string name="summary_model_tree">Decision Tree</string>
     <string name="summary_model_regression">Regression Model</string>
-    
+
     <string name="title_noise_model">Noise Model</string>
     <string name="summary_noise_model_desc">Generates a random number when requested.</string>
-    
+
     <string name="name_anonymous_trigger">Anonymous Trigger</string>
-    
+
     <string name="title_enable_probe">Enable Probe</string>
 
     <string name="menu_settings_label">Settings</string>
@@ -301,7 +301,7 @@
 
     <string name="summary_shion_probe_controller">Network Health %1$.1f%% (%2$d devices)</string>
     <string name="summary_shion_probe">%1$d devices</string>
-    
+
     <string name="summary_bluetooth_probe">Visible Bluetooth Devices: %1$d</string>
     <string name="summary_call_state_probe">Current Call State: %1$s</string>
 
@@ -318,7 +318,7 @@
     <string name="display_calls_outgoing_count_title">No. of Outgoing Calls</string>
     <string name="display_sms_incoming_count_title">No. of Incoming Text Messages</string>
     <string name="display_sms_outgoing_count_title">No. of Outgoing Text Messages</string>
-    
+
     <string name="menu_refresh_label">Refresh</string>
     <string name="menu_new_label">New Label</string>
     <string name="menu_accept_label">Save New Label</string>
@@ -329,12 +329,12 @@
     <string name="button_close">Close</string>
     <string name="button_enable">Enable</string>
     <string name="button_disable">Disable</string>
-    
+
     <string name="error_missing_uri">Missing or invalid URL. Closing&#8230;</string>
-    
+
     <string name="probe_noise_threshold_label">Noise Threshold</string>
     <string name="probe_noise_threshold_summary">Set the mimimum threshold to determine if a new reading is signal or noise.</string>
-    
+
     <string name="label_context">Context: %1$s</string>
 
     <string name="title_probes_count">%1$d Sensors</string>
@@ -348,7 +348,7 @@
     <string name="message_http_connection_error">HTTP connection failure.</string>
     <string name="message_socket_timeout_error">Socket timeout.</string>
     <string name="message_unverified_server">Unverified server.</string>
-    
+
     <string name="message_transmit_bytes">Sending %1$d kB&#8230;</string>
     <string name="message_server_error">Application error: %1$s</string>
     <string name="message_socket_error">Socket error: %1$s</string>
@@ -360,7 +360,7 @@
 
     <string name="notify_running">Functioning Normally&#8230;</string>
     <string name="notify_running_title">Application Status</string>
-    
+
     <string name="title_http_upload_section">Adaptive Uploader Setting</string>
     <string name="summary_http_upload_section">HTTP uploader that adjusts its behavior in response to available connectivity.</string>
     <string name="title_http_upload_uri">HTTP Upload Endpoint</string>
@@ -382,7 +382,7 @@
 
     <string name="title_http_liberal_ssl">Accept All SSL Certificates</string>
     <string name="summary_http_liberal_ssl">Accept all SSL certificates, regardless whether they validate properly.</string>
-    
+
     <string name="title_archive_enabled">Archive Transmitted Data</string>
     <string name="summary_archive_enabled">Save data transmitted to the server on the local device for later review.</string>
 
@@ -401,7 +401,7 @@
     <string name="display_pressure_reading">Pressure: %1$.1f mb, Altitude: %2$.1f m</string>
 
     <string name="display_magnetic_readings">Magnetic Field Measurements</string>
-    
+
     <string name="display_gyroscope_readings">Gyroscope Measurements</string>
     <string name="display_gyroscope_reading">X %1$.3f, Y %2$.3f, Z %3$.3f</string>
     <string name="display_accelerometer_readings">Accelerometer Measurements</string>
@@ -409,16 +409,16 @@
     <string name="display_rotation_readings">Rotation Vector Measurements</string>
     <string name="display_gravity_readings">Gravity Measurements</string>
     <string name="display_linear_acceleration_readings">Linear Acceleration Measurements</string>
-    
+
     <string name="display_light_readings">Light Measurements</string>
     <string name="display_light_reading">%1$.3f lux</string>
 
     <string name="display_item_count">%1$d measurements</string>
-   	<string name="display_date_item_count">%1$s (%2$s)</string>
+    <string name="display_date_item_count">%1$s (%2$s)</string>
 
     <string name="display_temperature_readings">Temperature Measurements</string>
     <string name="display_temperature_reading">%1$.3f degrees</string>
-    
+
     <string name="display_humidity_readings">Humidity Measurements</string>
     <string name="display_humidity_reading">%1$.3f%% relative humidity</string>
 
@@ -426,7 +426,7 @@
 
     <string name="display_bluetooth_devices_title">Visible Devices (%1$d)</string>
     <string name="display_bluetooth_device_title">%1$s: %2$s</string>
-    
+
     <string name="display_bluetooth_device_title_label">Bluetooth Name</string>
     <string name="display_bluetooth_device_address_label">Bluetooth Hardware Address</string>
 
@@ -436,7 +436,7 @@
     <string name="service_state_off">Radio Explicitly Deactivated</string>
 
     <string name="label_no_operator">None</string>
-    
+
     <string name="display_bluetooth_device_pair">Pairing Status</string>
     <string name="display_bluetooth_device_major">Major Device Class</string>
     <string name="display_bluetooth_device_minor">Minor Device Class</string>
@@ -449,7 +449,7 @@
 
     <string name="display_telephony_operator_title">Mobile Network Operator</string>
     <string name="display_telephony_network_title">Mobile Network Type</string>
-    
+
     <string name="display_screen_label">Screen State</string>
     <string name="display_screen_active_label">Active</string>
     <string name="display_screen_inactive_label">Inactive</string>
@@ -465,8 +465,8 @@
     <string name="display_current_ssid_title">Current Network (SSID)</string>
     <string name="display_current_bssid_title">Current Base Station ID (BSSID)</string>
     <string name="display_current_speed_title">Network Speed (Mbps)</string>
-	<string name="display_current_rssi_title">Signal Strength (RSSI)</string>
-    
+    <string name="display_current_rssi_title">Signal Strength (RSSI)</string>
+
     <string name="display_data_bundle">Data Bundle</string>
 
     <string name="summary_screen_probe_active">Screen State: Active</string>
@@ -482,17 +482,17 @@
     <string name="title_email_files">Compress &amp; E-Mail Archived Files</string>
     <string name="title_delete_files">Delete Archived Files</string>
 
-	<string name="battery_level_label">Battery Charge Level</string>
+    <string name="battery_level_label">Battery Charge Level</string>
     <string name="battery_time_label">Time</string>
 
     <string name="step_count_label">Battery Charge Level</string>
     <string name="step_count_time_label">Time</string>
-    
+
     <string name="battery_status_label">Battery Status</string>
     <string name="battery_tech_label">Battery Technology</string>
     <string name="battery_temp_label">Current Temperature</string>
     <string name="battery_volt_label">Current Voltage</string>
-    
+
     <string name="battery_status_charging">Charging</string>
     <string name="battery_status_discharging">Discharging</string>
     <string name="battery_status_full">Fully Charged</string>
@@ -501,18 +501,18 @@
 
     <string name="battery_health_label">Battery Health</string>
     <string name="battery_health_cold">Cold</string>
-	<string name="battery_health_dead">Dead</string>
-	<string name="battery_health_good">Good</string>
-	<string name="battery_health_overheat">Overheated</string>
-	<string name="battery_health_over_voltage">Over Voltage</string>
-	<string name="battery_health_failure">Unspecified Failure</string>
-	<string name="battery_health_unknown">Unknown</string>
+    <string name="battery_health_dead">Dead</string>
+    <string name="battery_health_good">Good</string>
+    <string name="battery_health_overheat">Overheated</string>
+    <string name="battery_health_over_voltage">Over Voltage</string>
+    <string name="battery_health_failure">Unspecified Failure</string>
+    <string name="battery_health_unknown">Unknown</string>
 
-	<string name="battery_plugged_label">Power Source</string>
-	<string name="battery_source_none">None</string>
-	<string name="battery_source_ac">Wall Adapter</string>
-	<string name="battery_source_usb">USB Port</string>
-	<string name="battery_source_other">Other</string>
+    <string name="battery_plugged_label">Power Source</string>
+    <string name="battery_source_none">None</string>
+    <string name="battery_source_ac">Wall Adapter</string>
+    <string name="battery_source_usb">USB Port</string>
+    <string name="battery_source_other">Other</string>
 
     <string name="call_state_label">Current Call State</string>
 
@@ -529,12 +529,12 @@
 
     <string name="title_enable_scheme_config">Include Scheme Configuration</string>
     <string name="title_enable_json_config">Include JSON Configuration</string>
-    
+
     <string name="hardware_model_label">Device Model</string>
     <string name="hardware_mfr_label">Device Manufacturer</string>
     <string name="hardware_bluetooth_label">Bluetooth MAC Address</string>
     <string name="hardware_wifi_label">Wi-Fi MAC Address</string>
-        	
+
     <string name="label_unknown_feature">Unknown Feature</string>
     <string name="menu_data_label">Show Readings</string>
 
@@ -567,7 +567,7 @@
     <!-- Gravity Probe -->
     <string name="title_gravity_probe">Gravity Probe</string>
     <string name="summary_gravity_probe_desc">Measures the gravitational force applied to the device. All values are in SI units (m/s^2).</string>
-    
+
     <!-- Rotation Vector Probe -->
     <string name="title_rotation_probe">Rotation Vector Probe</string>
     <string name="summary_rotation_probe_desc">Measures the orientation of the device as a combination of an angle and an axis, in which the device has rotated through an angle &#920; around an axis [x, y, z].</string>
@@ -575,7 +575,7 @@
     <!-- Geomagnetic Rotation Vector Probe -->
     <string name="title_geomagnetic_rotation_probe">Geomagnetic Rotation Vector Probe</string>
     <string name="summary_geomagnetic_rotation_probe_desc">Identical to the rotation vector probe, but uses a magnetometer instead of using a gyroscope. This uses less power than the probe, because it doesn\'t use the gyroscope. However, it is more noisy and will work best outdoors.</string>
-    
+
     <!-- Linear Acceleration Probe -->
     <string name="title_linear_acceleration_probe">Linear Acceleration Probe</string>
     <string name="summary_linear_acceleration_probe_desc">Measures the acceleration applied to the device (minus the gravity). All values are in SI units (m/s^2).</string>
@@ -620,7 +620,7 @@
     <string name="summary_proximity_probe_desc">How far the front of the device is from an object.</string>
     <string name="proximity_label">Proximity</string>
     <string name="proximity_formatted" formatted="false">Proximity: %f</string>
-    
+
     <!-- Temperature Probe -->
     <string name="title_temperature_probe">Temperature Probe</string>
     <string name="summary_temperature_probe_desc">Used to record temperature.</string>
@@ -628,7 +628,7 @@
     <!-- Humidity Probe -->
     <string name="title_humidity_probe">Ambient Humidity Probe</string>
     <string name="summary_humidity_probe_desc">Used to record ambient humidity.</string>
-    
+
     <!-- Battery Probe -->
     <string name="title_battery_probe">Battery Probe</string>
     <string name="summary_battery_probe_desc">Information about the type and current state of the battery in the device.</string>
@@ -640,17 +640,17 @@
     <!-- Step Counter Probe -->
     <string name="title_step_counter_probe">Step Counter Probe</string>
     <string name="summary_step_counter_probe_desc">Counts the number of steps taken since the last restart.</string>
-    
+
     <!-- Bluetooth Devices Probe -->
     <string name="title_bluetooth_probe">Visible Bluetooth Probe</string>
     <string name="summary_bluetooth_probe_desc">Detects Bluetooth devices within range.</string>
 
     <!-- Call State Probe -->
-  	<string name="title_call_state_probe">Current Call State</string>
+    <string name="title_call_state_probe">Current Call State</string>
     <string name="summary_call_state_probe_desc">Observes whether the mobile phone is idle or in use.</string>
 
     <!-- Communication Log Probe -->
-  	<string name="title_communication_probe">Call &amp; Message Info</string>
+    <string name="title_communication_probe">Call &amp; Message Info</string>
     <string name="summary_communication_probe_desc">Generates statistics and counts about phone, SMS, and other communication uses.</string>
 
     <!-- Hardware Info Probe -->
@@ -686,11 +686,11 @@
     <string name="title_mediarouter_probe">Media Router Probe</string>
     <string name="summary_mediarouter_probe_desc">Discovers available media routers (such as Chromecast devices).</string>
     <string name="summary_mediarouter_probe">Selected: %1$s (Volume %2$.1f / %3$.1f)</string>
-    
+
     <!-- Shion Probe -->
     <string name="title_shion_probe">Shion Probe</string>
     <string name="summary_shion_probe_desc">Fetches device information from a Shion home automation deployment.</string>
-    
+
     <!-- Telephony Probe -->
     <string name="title_telephony_probe">Telephony Probe</string>
     <string name="summary_telephony_probe_desc">Records telephony hardware, software, and account information.</string>
@@ -706,7 +706,7 @@
     <string name="summary_google_places_probe_desc">Counts the number of nearby location types.</string>
     <string name="summary_google_places">Most Frequent Place Type: %1$s (%2$d)</string>
     <string name="feature_google_places_radius_label">Search radius</string>
-    
+
     <!-- Running Software Probe -->
     <string name="title_running_software_probe">Running Software Probe</string>
     <string name="summary_running_software_probe_desc">Details about the apps the device is currently running.</string>
@@ -749,14 +749,14 @@
     <string name="title_enable_lowpass_probe">Retain lowpass component</string>
 
     <string name="summary_frequency_statistics_feature">Peak Hz: %1$.1f, %2$.1f, %3$.1f\nMagnitude: %4$.2f, %5$.2f, %6$.2f</string>
-    
+
     <!-- Gyroscope Statistics Probe -->
     <string name="title_gyroscope_statistics_feature">Gyroscope Statistics</string>
     <string name="summary_gyroscope_statistics_feature_desc">Provides basic descriptive statistics for incoming gyroscope data.</string>
-    
+
     <!-- Magnetic Field Statistics Probe -->
     <string name="title_magnetic_statistics_feature">Magnetic Field Statistics</string>
-    
+
     <!-- Pebble Probe -->
     <string name="title_pebble_probe">Pebble Watch</string>
     <string name="summary_pebble_probe_desc">Collects data from a Pebble smartwatch.</string>
@@ -797,7 +797,7 @@
 
     <string name="app_category_unknown">Unknown</string>
     <string name="app_category_bundled">Bundled</string>
-    
+
     <string name="summary_after_sunset_probe">Night: %1$d Minute(s) After Sunset</string>
     <string name="summary_before_sunrise_probe" formatted="false">Night: %d Minute(s) Before Sunrise</string>
     <string name="summary_before_sunset_probe" formatted="false">Day: %d Minute(s) Before Sunset</string>
@@ -806,19 +806,19 @@
     <string name="title_sunrise_sunset_feature">Sunrise &amp; Sunset Feature</string>
 
     <string name="pr_version_label">Purple Robot Version</string>
-    
+
     <!-- Acknowledgements -->
     <string name="title_acknowledgements_section">Acknowledgements</string>
     <string name="title_third_party_libraries">Third Party Libraries &amp; Code</string>
-    
+
     <string name="title_third_actionbarsherlock">ActionBarSherlock</string>
     <string name="summary_third_actionbarsherlock">Jake Wharton (Apache 2.0 License)</string>
     <string name="url_third_actionbarsherlock">http://actionbarsherlock.com/</string>
-    
+
     <string name="title_third_rhino">Rhino</string>
     <string name="summary_third_rhino">Mozilla (Mozilla Public License 2.0)</string>
     <string name="url_third_rhino">https://developer.mozilla.org/en-US/docs/Rhino</string>
-    
+
     <string name="title_third_ical">iCal4j</string>
     <string name="summary_third_ical">Ben Fortuna (New BSD License)</string>
     <string name="url_third_ical">http://ical4j.sourceforge.net/</string>
@@ -838,7 +838,7 @@
     <string name="title_third_jscheme">JScheme</string>
     <string name="summary_third_jscheme">Ken Anderson, Tim Hickey, Peter Norvig, et al. (zlib/libpng License)</string>
     <string name="url_third_jscheme">http://jscheme.sourceforge.net/jscheme/main.html</string>
-    
+
     <string name="title_third_jquery">jQuery</string>
     <string name="summary_third_jquery">jQuery Foundation (MIT License)</string>
     <string name="url_third_jquery">http://jquery.com/</string>
@@ -854,12 +854,12 @@
     <string name="title_third_rickshaw">Rickshaw</string>
     <string name="summary_third_rickshaw">Shutterstock (MIT License)</string>
     <string name="url_third_rickshaw">http://code.shutterstock.com/rickshaw/</string>
-    
+
     <string name="title_third_datejs">Datejs</string>
     <string name="summary_third_datejs">Coolite Inc. (MIT License)</string>
     <string name="url_third_datejs">http://www.datejs.com/</string>
 
-	<string name="title_third_pregexpscm">pregexp.scm</string>
+    <string name="title_third_pregexpscm">pregexp.scm</string>
     <string name="summary_third_pregexpscm">Dorai Sitaram (LGPL License)</string>
     <string name="url_third_pregexpscm">http://www.ccs.neu.edu/home/dorai/pregexp/index.html</string>
 
@@ -870,23 +870,23 @@
     <string name="title_third_jstat">jStat</string>
     <string name="summary_third_jstat">John Resig (MIT License)</string>
     <string name="url_third_jstat">http://www.jstat.org/</string>
-    
+
     <string name="title_third_beautifier">JS Beautifier</string>
     <string name="summary_third_beautifier">Einar Lielmanis (MIT License)</string>
     <string name="url_third_beautifier">https://github.com/einars/js-beautify</string>
-    
+
     <string name="title_third_gson">GSON</string>
     <string name="summary_third_gson">Google (Apache License 2.0)</string>
     <string name="url_third_gson">https://code.google.com/p/google-gson/</string>
-    
+
     <string name="title_third_jmdns">JmDNS</string>
     <string name="summary_third_jmdns">Arthur van Hoff, Rich Blair, Pierre Frisch, et al. (Apache License 2.0)</string>
     <string name="url_third_jmdns">http://jmdns.sourceforge.net/</string>
-    
+
     <string name="title_third_jsoup">jsoup</string>
     <string name="summary_third_jsoup">Jonathan Hedley (MIT License)</string>
     <string name="url_third_jsoup">http://jsoup.org/</string>
-    
+
     <string name="title_third_mixpanel">MixPanel API</string>
     <string name="summary_third_mixpanel">MixPanel (MIT License)</string>
     <string name="url_third_mixpanel">https://mixpanel.com/docs/integration-libraries/android</string>
@@ -898,7 +898,7 @@
     <string name="title_slugify">slugify</string>
     <string name="summary_slugify">Danny Trunk (GPL License)</string>
     <string name="url_slugify">https://github.com/slugify/slugify</string>
-    
+
     <string name="title_epoch">Epoch</string>
     <string name="summary_epoch">Fastly (MIT License)</string>
     <string name="url_epoch">http://fastly.github.io/epoch/</string>
@@ -906,9 +906,9 @@
     <string name="title_moment">Moment.JS</string>
     <string name="summary_moment">Tim Wood &amp; Iskren Chernev (MIT License)</string>
     <string name="url_moment">http://momentjs.com/</string>
-    
-   	<string name="title_funders">Funders &amp; Benefactors</string>
-    
+
+    <string name="title_funders">Funders &amp; Benefactors</string>
+
     <string name="title_funder_nih">National Institutes of Health</string>
     <string name="summary_funder_nih">U.S. Department of Health &amp; Human Services</string>
     <string name="url_funder_nih">http://www.nih.gov/</string>
@@ -927,7 +927,7 @@
 
     <string name="name_sanity_warning">Warning</string>
     <string name="check_warning_message">Warning Test</string>
-    
+
     <string name="name_sanity_error">Error</string>
     <string name="check_error_message">Error Test</string>
 
@@ -937,19 +937,19 @@
     <string name="name_sanity_disk_space_external_error">Less than 4MB of space is available on external storage (SD Card).</string>
     <string name="name_sanity_disk_space_external_warning">Less than 10MB of space is available on external storage (SD Card).</string>
     <string name="name_sanity_disk_space_external_unknown_warning">Unable to inspect external storage (SD Card).</string>
-    
-  	<string name="name_sanity_last_upload">Last Upload</string>
+
+    <string name="name_sanity_last_upload">Last Upload</string>
     <string name="name_sanity_last_upload_never">Sensor data has not ever been uploaded.</string>
-   	<string name="name_sanity_last_upload_error">Sensor data has not been uploaded in the last day.</string>
+    <string name="name_sanity_last_upload_error">Sensor data has not been uploaded in the last day.</string>
     <string name="name_sanity_last_upload_warning">Sensor data has not been uploaded in the last 12 hours.</string>
 
     <string name="name_sanity_upload_progress">Upload Progress</string>
     <string name="name_sanity_upload_progress_error">Current sensor acquisition exceeds the available outbound bandwidth.</string>
     <string name="name_sanity_upload_progress_warning">Current sensor acquisition consumes a significant amount of the available outbound bandwidth.</string>
     <string name="name_sanity_upload_progress_unknown">Unable to compare available bandwidth with current sensor data acquisition rates.</string>
-    	    
+
     <string name="name_sanity_script_error">Script Errors</string>
-	<string name="name_sanity_script_duration">Script Duration</string>
+    <string name="name_sanity_script_duration">Script Duration</string>
 
     <string name="name_sanity_server_failure">Server Failures</string>
 
@@ -980,34 +980,34 @@
     <string name="name_sanity_location_services_enabled_warning">Required location services are currently disabled. Tap here to correct the issue.</string>
 
     <string name="message_clearing_archive">Clearing archive files&#8230;</string>
-    
+
     <string name="pending_files_label">Pending Uploads Count</string>
     <string name="pending_files_file">%1$d file(s)</string>
     <string name="pending_files_placeholder">Calculating file count&#8230;</string>
 
     <string name="summary_univariate_statistics_feature">%1$.2f (mean), %2$.2f (std. dev.), %3$.2f (RMS)</string>
-    
+
     <!-- Light Sensor Statistics Probe -->
     <string name="title_light_statistics_feature">Light Sensor Statistics</string>
     <string name="summary_light_statistics_feature_desc">Provides basic descriptive statistics for incoming light sensor data.</string>
-    
+
     <!-- Pressure Sensor Statistics Probe -->
     <string name="title_pressure_statistics_feature">Pressure Sensor Statistics</string>
     <string name="summary_pressure_statistics_feature_desc">Provides basic descriptive statistics for incoming pressure sensor data.</string>
-    
+
     <!-- Proximity Sensor Statistics Probe -->
     <string name="title_proximity_statistics_feature">Proximity Sensor Statistics</string>
     <string name="summary_proximity_statistics_feature_desc">Provides basic descriptive statistics for incoming proximity sensor data.</string>
-    
+
     <!-- Temperature Sensor Statistics Probe -->
     <string name="title_temperature_statistics_feature">Temperature Sensor Statistics</string>
     <string name="summary_temperature_statistics_feature_desc">Provides basic descriptive statistics for incoming temperature sensor data.</string>
-    
+
     <!-- Date Calendar Probe -->
     <string name="title_date_calendar_probe">Date Calendar Sensor</string>
     <string name="summary_date_calendar_probe_desc">Records basic information from the local calendar, including elements like the day of the week, week of the month, month of the year, etc.</string>
     <string name="summary_date_calendar_probe">Month of Year %1$d, Week of Month %2$d, Day of Week %3$d</string>
-    
+
     <!-- Distance Probe -->
     <string name="title_distances_probe">Significant Location Distances Sensor</string>
     <string name="summary_distances_probe_desc">Calculates the distance from significant locations in the local address book.</string>
@@ -1021,22 +1021,22 @@
 
     <string name="create_distances_table">CREATE TABLE IF NOT EXISTS distance_history(_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, distance REAL, timestamp INTEGER DEFAULT 0);</string>
 
-  	<string name="name_sanity_configuration">Purple Robot Configuration</string>
-	<string name="name_sanity_configuration_upload_warning">The HTTP data upload interval is less than 10 minutes. Consider extending this interval to extend battery life. (Settings &#8594; HTTP Upload Settings &#8594;HTTP Upload Interval)</string>
-	<string name="name_sanity_configuration_refresh_warning">The configuration refresh interval is less than 10 minutes. Consider extending this interval to extend battery life. (Settings &#8594; Refresh Interval)</string>
-	
-	
-	<!-- Fitbit API Feature -->
-   	<string name="title_fitbit_probe">Fitbit</string>
+    <string name="name_sanity_configuration">Purple Robot Configuration</string>
+    <string name="name_sanity_configuration_upload_warning">The HTTP data upload interval is less than 10 minutes. Consider extending this interval to extend battery life. (Settings &#8594; HTTP Upload Settings &#8594;HTTP Upload Interval)</string>
+    <string name="name_sanity_configuration_refresh_warning">The configuration refresh interval is less than 10 minutes. Consider extending this interval to extend battery life. (Settings &#8594; Refresh Interval)</string>
+
+
+    <!-- Fitbit API Feature -->
+    <string name="title_fitbit_probe">Fitbit</string>
     <string name="summary_fitbit_probe_desc">Retrieves information from the your online Fitbit profile.</string>
-	<string name="title_authenticate_fitbit_probe">Login to Fitbit</string>	
-	<string name="summary_authenticate_fitbit_probe">Tap to go to the Fitbit website and login to give this device access to your activity data.</string>	
-	<string name="title_logout_fitbit_probe">Log Out of Fitbit</string>	
-	<string name="summary_logout_fitbit_probe">Tap to clear your Fitbit login information and revoke access to this device.</string>	
-	<string name="toast_fitbit_logout">Logged out of Fitbit.</string>	
+    <string name="title_authenticate_fitbit_probe">Login to Fitbit</string>
+    <string name="summary_authenticate_fitbit_probe">Tap to go to the Fitbit website and login to give this device access to your activity data.</string>
+    <string name="title_logout_fitbit_probe">Log Out of Fitbit</string>
+    <string name="summary_logout_fitbit_probe">Tap to clear your Fitbit login information and revoke access to this device.</string>
+    <string name="toast_fitbit_logout">Logged out of Fitbit.</string>
     <string name="summary_fitbit">Steps: %1$.0f, Goal Progress: %2$.2f%% Complete</string>
-	<string name="title_fitbit_check">Fitbit requires authorization</string>
-	<string name="message_fitbit_check">Please login to the Fitbit website from the settings to grant Purple Robot access to your Fitbit account.</string>
+    <string name="title_fitbit_check">Fitbit requires authorization</string>
+    <string name="message_fitbit_check">Please login to the Fitbit website from the settings to grant Purple Robot access to your Fitbit account.</string>
 
     <string name="title_fitbit_beta_probe">Fitbit (Beta)</string>
     <string name="summary_fitbit_beta_probe_desc">Retrieves information from the your online Fitbit profile. This is a beta probe and should not be used in production capacities.</string>
@@ -1067,31 +1067,31 @@
     <string name="config_probe_calibrate_title">Calibrate Probe</string>
     <string name="title_enable_calibration_notifications">Enable Calibration Notifications</string>
     <string name="summary_enable_calibration_notifications">Allow the probe to request more information once a sufficient amount of data has been collected</string>
-	<!-- Address Book Label Activity -->
-	<string name="title_address_book_label">People Calibrator</string>	
-	<string name="title_address_book_label_check">Friends &amp; Family Info Needed</string>	
-	<string name="message_address_book_label_check">Please provide some information about your friends and family to help the system function better.</string>	
-	<string name="contact_group_label_unknown">Unknown</string>	
+    <!-- Address Book Label Activity -->
+    <string name="title_address_book_label">People Calibrator</string>
+    <string name="title_address_book_label_check">Friends &amp; Family Info Needed</string>
+    <string name="message_address_book_label_check">Please provide some information about your friends and family to help the system function better.</string>
+    <string name="contact_group_label_unknown">Unknown</string>
 
-	<!-- <string name="google_places_browser_key"></string> -->
+    <!-- <string name="google_places_browser_key"></string> -->
 
-	<!-- Location Label Activity -->
-	<string name="title_location_label">Places Calibrator</string>	
-	<string name="title_location_desc">Tap a colored box to zoom into a cluster.</string>	
-	<string name="title_location_label_check">Location Info Needed</string>	
-	<string name="message_location_label_check">Please provide some information about places you have visited to help the system function better.</string>	
+    <!-- Location Label Activity -->
+    <string name="title_location_label">Places Calibrator</string>
+    <string name="title_location_desc">Tap a colored box to zoom into a cluster.</string>
+    <string name="title_location_label_check">Location Info Needed</string>
+    <string name="message_location_label_check">Please provide some information about places you have visited to help the system function better.</string>
 
-	<string name="title_place_unknown">Unknown Place</string>	
+    <string name="title_place_unknown">Unknown Place</string>
     <string name="title_place_count">%1$d coordinates logged</string>
     <string name="menu_label_cluster">Choose a Label</string>
-        
+
     <string name="config_special_category">Special Options &amp; Actions</string>
-   	<string name="title_mail_app_schema">E-mail App Configuration Schema</string>
-   	<string name="message_mail_app_schema">Please see the attached file for the app configuration schema.</string>
-   	<string name="subject_mail_app_schema">Purple Robot Configuration Schema</string>
-   		<!--<string name="name_sanity_last_upload_never">Sensor data has not ever been uploaded.</string>
+    <string name="title_mail_app_schema">E-mail App Configuration Schema</string>
+    <string name="message_mail_app_schema">Please see the attached file for the app configuration schema.</string>
+    <string name="subject_mail_app_schema">Purple Robot Configuration Schema</string>
+    <!--<string name="name_sanity_last_upload_never">Sensor data has not ever been uploaded.</string>
    	<string name="name_sanity_last_upload_error">Sensor data has not been uploaded in the last day.</string>
-    <string name="name_sanity_last_upload_warning">Sensor data has not been uploaded in the last 12 hours.</string> -->    
+    <string name="name_sanity_last_upload_warning">Sensor data has not been uploaded in the last 12 hours.</string> -->
 
     <string name="probe_device_info_category">Device Information &amp; Configuration Probes</string>
     <string name="probe_external_services_category">External Service Probes</string>
@@ -1121,25 +1121,25 @@
     <string name="summary_communication_events_phone_type">Phone Call</string>
     <string name="summary_communication_events_sms_type">Text Message</string>
     <string name="summary_communication_events_probe">Last %1$s: %2$s (%3$s)</string>
-    
+
     <string name="config_dialog_count_label" formatted="false">Maximum No. of Stacked Dialogs</string>
     <string name="config_dialog_count_message" formatted="false">Limits the number of dialog views that will stack upon each other before older dialogs are deleted.</string>
-    
+
     <string name="title_application_launch_probe">Application Launch Events</string>
     <string name="summary_application_launch_probe_desc">Records when different apps come to the top of the user\'s task stack.</string>
     <string name="summary_app_launch_probe">%1$s (%2$s)</string>
-    
+
     <string name="available_sensors_label">Available Hardware Sensors</string>
 
     <string name="title_facebook_events_probe">Recent Facebook Events Probe</string>
-    
+
     <string name="title_facebook_probe">Facebook</string>
     <string name="summary_facebook_probe_desc">Collects profile &amp; behavioral data from Facebook.</string>
     <string name="config_probe_facebook_encrypt_title">Encrypt Message Contents</string>
     <string name="config_probe_facebook_encrypt_summary">Encrypts the contents of outgoing messages and posts to your Facebook wall.</string>
 
-    <string name="title_facebook_check">Facebook Login Required</string>	
-	<string name="message_facebook_check">Please login to Facebook to complete the setup of the Facebook Probe.</string>
+    <string name="title_facebook_check">Facebook Login Required</string>
+    <string name="message_facebook_check">Please login to Facebook to complete the setup of the Facebook Probe.</string>
 
     <string name="facebook_count_desc">%1$d Posts in the Last Hour, %2$d Posts in the Last Day</string>
     <string name="facebook_count_desc_single_hour">1 Post in the Last Hour, %1$d Posts in the Last Day</string>
@@ -1160,137 +1160,137 @@
     <string name="config_probe_twitter_encrypt_title">Encrypt Tweet Contents</string>
     <string name="config_probe_twitter_encrypt_summary">Encrypts the contents of posted tweets.</string>
 
-	<string name="title_authenticate_twitter_probe">Login to Twitter</string>	
-	<string name="summary_authenticate_twitter_probe">Tap to go to the Twitter website and login to give this device access to your tweets.</string>	
-	<string name="title_logout_twitter_probe">Log Out of Twitter</string>	
-	<string name="summary_logout_twitter_probe">Tap to clear your Twitter login information and revoke access to this device.</string>	
-	<string name="toast_twitter_logout">Logged out of Twitter.</string>	
-	<string name="title_twitter_check">Twitter probe requires authorization</string>	
-	<string name="message_twitter_check">Please login to the Twitter website from the settings to grant Purple Robot access to your Twitter account.</string>	
+    <string name="title_authenticate_twitter_probe">Login to Twitter</string>
+    <string name="summary_authenticate_twitter_probe">Tap to go to the Twitter website and login to give this device access to your tweets.</string>
+    <string name="title_logout_twitter_probe">Log Out of Twitter</string>
+    <string name="summary_logout_twitter_probe">Tap to clear your Twitter login information and revoke access to this device.</string>
+    <string name="toast_twitter_logout">Logged out of Twitter.</string>
+    <string name="title_twitter_check">Twitter probe requires authorization</string>
+    <string name="message_twitter_check">Please login to the Twitter website from the settings to grant Purple Robot access to your Twitter account.</string>
 
-	<!-- Instagram API Feature -->
+    <!-- Instagram API Feature -->
     <string name="title_instagram_probe">Instagram</string>
     <string name="summary_instagram_probe_desc">Collects profile data &amp; posts from Instagram.</string>
     <string name="config_probe_instagram_encrypt_title">Encrypt Instagram Contents</string>
     <string name="config_probe_instagram_encrypt_summary">Encrypts the contents of data retrieved from Instagram.</string>
 
-	<string name="title_authenticate_instagram_probe">Login to Instagram</string>	
-	<string name="summary_authenticate_instagram_probe">Tap to go to the Instagram website and login to give this device access to your posts.</string>	
-	<string name="title_logout_instagram_probe">Log Out of Instagram</string>	
-	<string name="summary_logout_instagram_probe">Tap to clear your Instagram login information and revoke access to this device.</string>	
-	<string name="toast_instagram_logout">Logged out of Instagram.</string>	
-	<string name="title_instagram_check">Instagram probe requires authorization</string>	
-	<string name="message_instagram_check">Please login to the Instagram website from the settings to grant Purple Robot access to your Instagram account.</string>	
+    <string name="title_authenticate_instagram_probe">Login to Instagram</string>
+    <string name="summary_authenticate_instagram_probe">Tap to go to the Instagram website and login to give this device access to your posts.</string>
+    <string name="title_logout_instagram_probe">Log Out of Instagram</string>
+    <string name="summary_logout_instagram_probe">Tap to clear your Instagram login information and revoke access to this device.</string>
+    <string name="toast_instagram_logout">Logged out of Instagram.</string>
+    <string name="title_instagram_check">Instagram probe requires authorization</string>
+    <string name="message_instagram_check">Please login to the Instagram website from the settings to grant Purple Robot access to your Instagram account.</string>
 
-	<!-- LinkedIn API Feature -->
+    <!-- LinkedIn API Feature -->
     <string name="title_linkedin_probe">LinkedIn</string>
     <string name="summary_linkedin_probe_desc">Collects profile data &amp; posts from LinkedIn.</string>
     <string name="config_probe_linkedin_encrypt_title">Encrypt LinkedIn Contents</string>
     <string name="config_probe_linkedin_encrypt_summary">Encrypts the contents of data retrieved from LinkedIn.</string>
-	
-	<string name="title_authenticate_linkedin_probe">Login to LinkedIn</string>	
-	<string name="summary_authenticate_linkedin_probe">Tap to go to the LinkedIn website and login to give this device access to your posts.</string>	
-	<string name="title_logout_linkedin_probe">Log Out of LinkedIn</string>	
-	<string name="summary_logout_linkedin_probe">Tap to clear your LinkedIn login information and revoke access to this device.</string>	
-	<string name="toast_linkedin_logout">Logged out of LinkedIn.</string>	
-	<string name="title_linkedin_check">LinkedIn probe requires authorization</string>	
-	<string name="message_linkedin_check">Please login to the LinkedIn website from the settings to grant Purple Robot access to your LinkedIn account.</string>	
 
-	<!-- Foursquare API Feature -->
+    <string name="title_authenticate_linkedin_probe">Login to LinkedIn</string>
+    <string name="summary_authenticate_linkedin_probe">Tap to go to the LinkedIn website and login to give this device access to your posts.</string>
+    <string name="title_logout_linkedin_probe">Log Out of LinkedIn</string>
+    <string name="summary_logout_linkedin_probe">Tap to clear your LinkedIn login information and revoke access to this device.</string>
+    <string name="toast_linkedin_logout">Logged out of LinkedIn.</string>
+    <string name="title_linkedin_check">LinkedIn probe requires authorization</string>
+    <string name="message_linkedin_check">Please login to the LinkedIn website from the settings to grant Purple Robot access to your LinkedIn account.</string>
+
+    <!-- Foursquare API Feature -->
     <string name="title_foursquare_probe">Foursquare</string>
     <string name="summary_foursquare_probe_desc">Collects activity from Foursquare as well as names for current locations.</string>
 
-	<string name="title_authenticate_foursquare_probe">Login to Foursquare</string>	
-	<string name="summary_authenticate_foursquare_probe">Tap to go to the Foursquare website and login to give this device access to your activity.</string>	
-	<string name="title_logout_foursquare_probe">Log Out of Foursquare</string>	
-	<string name="summary_logout_foursquare_probe">Tap to clear your Foursquare login information and revoke access to this device.</string>	
-	<string name="toast_foursquare_logout">Logged out of Foursquare.</string>	
-	<string name="title_foursquare_check">Foursquare probe requires authorization</string>	
-	<string name="message_foursquare_check">Please login to the Foursquare website from the settings to grant Purple Robot access to your Foursquare account.</string>	
-	<string name="config_probe_foursquare_pull_title">Fetch Foursquare Activity</string>	
-	<string name="config_probe_foursquare_pull_summary">Retrieves check-ins and other activity from your account.</string>	
-	<string name="summary_foursquare_checkin_summary">Most Recent Venue: %1$s</string>	
-	
-	<string name="label_trigger_original_start">Original Start Date String</string>	
-	<string name="label_trigger_original_end">Original End Date String</string>	
-	<string name="label_trigger_start">Effective Start Date String</string>	
-	<string name="label_trigger_end">Effective End Date String</string>	
-	
-	<string name="label_trigger_repeat">Repeat Specification</string>	
-	<string name="label_trigger_random">Random Specification</string>	
-	<string name="label_trigger_is_random">True</string>	
-	<string name="label_trigger_not_random">False</string>	
+    <string name="title_authenticate_foursquare_probe">Login to Foursquare</string>
+    <string name="summary_authenticate_foursquare_probe">Tap to go to the Foursquare website and login to give this device access to your activity.</string>
+    <string name="title_logout_foursquare_probe">Log Out of Foursquare</string>
+    <string name="summary_logout_foursquare_probe">Tap to clear your Foursquare login information and revoke access to this device.</string>
+    <string name="toast_foursquare_logout">Logged out of Foursquare.</string>
+    <string name="title_foursquare_check">Foursquare probe requires authorization</string>
+    <string name="message_foursquare_check">Please login to the Foursquare website from the settings to grant Purple Robot access to your Foursquare account.</string>
+    <string name="config_probe_foursquare_pull_title">Fetch Foursquare Activity</string>
+    <string name="config_probe_foursquare_pull_summary">Retrieves check-ins and other activity from your account.</string>
+    <string name="summary_foursquare_checkin_summary">Most Recent Venue: %1$s</string>
 
-	<string name="label_trigger_boot">Fire on Boot</string>	
-	<string name="label_trigger_is_boot">True</string>	
-	<string name="label_trigger_not_boot">False</string>	
-	
-	<!-- Activity Detection Probe -->
+    <string name="label_trigger_original_start">Original Start Date String</string>
+    <string name="label_trigger_original_end">Original End Date String</string>
+    <string name="label_trigger_start">Effective Start Date String</string>
+    <string name="label_trigger_end">Effective End Date String</string>
 
-	<string name="title_activity_detection_probe">Activity Detection Probe</string>	
-	<string name="summary_activity_detection_probe_desc">Uses Google Play services to categorize the user\'s activity based on sensor readings.</string>	
-	<string name="summary_activity_detection_probe">Most Likely Activity: %1$s (%2$.2f)</string>	
-			
-	
-	<!-- Snapshot Activity -->
-	<string name="menu_play_snapshot_label">Play Snapshot Audio</string>
-	
-	<string name="config_snapshots_category">Snapshots</string>
-	<string name="title_record_snapshot_audio">Record Snapshot Audio</string>
-	<string name="summary_record_snapshot_audio">When checked, records 5 seconds of audio from the microphone immediately after a snapshot is created.</string>
-	<string name="toast_recording_audio">Recording snapshot audio&#8230;</string>
+    <string name="label_trigger_repeat">Repeat Specification</string>
+    <string name="label_trigger_random">Random Specification</string>
+    <string name="label_trigger_is_random">True</string>
+    <string name="label_trigger_not_random">False</string>
 
-	<string name="empty_snapshot_error">No sensor data to associate with snapshot&#8230;</string>
+    <string name="label_trigger_boot">Fire on Boot</string>
+    <string name="label_trigger_is_boot">True</string>
+    <string name="label_trigger_not_boot">False</string>
 
-	<string name="auth_success_title">Great Work!</string>
-	<string name="auth_success_message">You have successfully connected Purple Robot to your online account.</string>
-	<string name="auth_success_close">Continue&#8230;</string>
+    <!-- Activity Detection Probe -->
 
-	<string name="note_purple_robot_status">Purple Robot Status</string>
-	<string name="note_purple_robot_message_single">You have 1 action or issue to resolve.</string>
-	<string name="note_purple_robot_message_multiple">You have %1$d actions or issues to resolve.</string>
+    <string name="title_activity_detection_probe">Activity Detection Probe</string>
+    <string name="summary_activity_detection_probe_desc">Uses Google Play services to categorize the user\'s activity based on sensor readings.</string>
+    <string name="summary_activity_detection_probe">Most Likely Activity: %1$s (%2$.2f)</string>
 
-	<string name="snapshot_has_audio">Audio Available</string>
-	<string name="name_scheme_config_check">Scheme Config Check</string>
-	
-	<string name="scheme_config_check_missing">Missing configuration value: %1$s</string>
-	<string name="scheme_config_check_changed">Changed configuration value: %1$s</string>
-	<string name="scheme_config_invalid_config">Invalid Scheme configuration file</string>
-		
-	<string name="title_config_check">Inspect Configuration</string>
-	<string name="summary_config_check">When possible, compare running configuration with network configuration to detect missing or changed values.</string>
-	
-	<string name="title_shared_upload_section">General Data Upload Settings</string>
-	<string name="summary_shared_upload_section">Shared settings used by all data upload plugins.</string>
 
-	<string name="title_streaming_jackson_upload_enabled">Enable JSON Uploader</string>
-	<string name="title_streaming_jackson_upload_section">JSON Uploader Settings</string>
-	<string name="summary_streaming_jackson_upload_section">Beta uploader that improves CPU utilization and battery life. (Beta)</string>
-	<string name="toast_mail_not_found">Mail client not found. Aborting&#8230;</string>
-	
-	<string name="checkbox_remember_response">Remember this response.</string>
-	
-	<string name="title_fire_triggers">Fire Trigger</string>
-	<string name="menu_trigger_label">Triggers</string>
-	<string name="message_no_triggers">No triggers are currently configured on this device.</string>
-	<string name="message_no_user_triggers">No user-accessible triggers are currently available.</string>
-	
-	<string name="message_snapshot_not_found">Snapshot not found. Check that you provided a valid "timestamp" parameter.</string>
-	
-	<string name="installed_triggers_label">Installed Triggers</string>
-	<string name="no_installed_triggers_label">No installed triggers</string>
-	<string name="trigger_fired_never">Never</string>
-	<string name="trigger_enabled">Enabled</string>					
-	<string name="trigger_disabled">Disabled</string>					
-		
-    <string name="trigger_diagnostic_string">%1$s/%2$s\n(%3$s, %4$s)</string>	
-    
+    <!-- Snapshot Activity -->
+    <string name="menu_play_snapshot_label">Play Snapshot Audio</string>
+
+    <string name="config_snapshots_category">Snapshots</string>
+    <string name="title_record_snapshot_audio">Record Snapshot Audio</string>
+    <string name="summary_record_snapshot_audio">When checked, records 5 seconds of audio from the microphone immediately after a snapshot is created.</string>
+    <string name="toast_recording_audio">Recording snapshot audio&#8230;</string>
+
+    <string name="empty_snapshot_error">No sensor data to associate with snapshot&#8230;</string>
+
+    <string name="auth_success_title">Great Work!</string>
+    <string name="auth_success_message">You have successfully connected Purple Robot to your online account.</string>
+    <string name="auth_success_close">Continue&#8230;</string>
+
+    <string name="note_purple_robot_status">Purple Robot Status</string>
+    <string name="note_purple_robot_message_single">You have 1 action or issue to resolve.</string>
+    <string name="note_purple_robot_message_multiple">You have %1$d actions or issues to resolve.</string>
+
+    <string name="snapshot_has_audio">Audio Available</string>
+    <string name="name_scheme_config_check">Scheme Config Check</string>
+
+    <string name="scheme_config_check_missing">Missing configuration value: %1$s</string>
+    <string name="scheme_config_check_changed">Changed configuration value: %1$s</string>
+    <string name="scheme_config_invalid_config">Invalid Scheme configuration file</string>
+
+    <string name="title_config_check">Inspect Configuration</string>
+    <string name="summary_config_check">When possible, compare running configuration with network configuration to detect missing or changed values.</string>
+
+    <string name="title_shared_upload_section">General Data Upload Settings</string>
+    <string name="summary_shared_upload_section">Shared settings used by all data upload plugins.</string>
+
+    <string name="title_streaming_jackson_upload_enabled">Enable JSON Uploader</string>
+    <string name="title_streaming_jackson_upload_section">JSON Uploader Settings</string>
+    <string name="summary_streaming_jackson_upload_section">Beta uploader that improves CPU utilization and battery life. (Beta)</string>
+    <string name="toast_mail_not_found">Mail client not found. Aborting&#8230;</string>
+
+    <string name="checkbox_remember_response">Remember this response.</string>
+
+    <string name="title_fire_triggers">Fire Trigger</string>
+    <string name="menu_trigger_label">Triggers</string>
+    <string name="message_no_triggers">No triggers are currently configured on this device.</string>
+    <string name="message_no_user_triggers">No user-accessible triggers are currently available.</string>
+
+    <string name="message_snapshot_not_found">Snapshot not found. Check that you provided a valid "timestamp" parameter.</string>
+
+    <string name="installed_triggers_label">Installed Triggers</string>
+    <string name="no_installed_triggers_label">No installed triggers</string>
+    <string name="trigger_fired_never">Never</string>
+    <string name="trigger_enabled">Enabled</string>
+    <string name="trigger_disabled">Disabled</string>
+
+    <string name="trigger_diagnostic_string">%1$s/%2$s\n(%3$s, %4$s)</string>
+
     <string name="config_fitbit_sleep_title">Include Sleep Information</string>
     <string name="config_fitbit_food_title">Include Food Information</string>
     <string name="config_fitbit_body_title">Include Body Information</string>
 
     <string name="title_saint_probe">SAINT Probe</string>
-    <string name="summary_saint_probe_desc">Fetches data collected &amp; predicted by the SAINT sensing &amp; activity recognition library.</string>    	
+    <string name="summary_saint_probe_desc">Fetches data collected &amp; predicted by the SAINT sensing &amp; activity recognition library.</string>
 
     <string name="label_speech_none">No Speech Detected</string>
     <string name="label_speech_human">Speech Detected</string>
@@ -1299,9 +1299,9 @@
     <string name="label_activity_walking">Walking Activity</string>
     <string name="label_activity_running">Running Activity</string>
 
-    <string name="summary_saint_probe">%1$s: %2$s</string>	
-    
-<!--     
+    <string name="summary_saint_probe">%1$s: %2$s</string>
+
+    <!--
     <string name="config_probe_facebook_hash_title">Obfuscate Details</string>
     <string name="config_probe_facebook_hash_summary">Hashes recipient and profile data to obfuscate personally-identitifiable information.</string>
     <string name="title_confirm_label">Confirm Label</string>
@@ -1389,79 +1389,79 @@
     <string name="summary_installed_apps_probe" formatted="false">%d Installed Apps</string>
     
 -->
-		
-	<string name="value_zero">0</string>
-	<string name="value_four">4</string>
-	<string name="value_sixty">60</string>
-	<string name="value_256k">262114</string>
-	<string name="value_300">300</string>
-	<string name="value_600">600</string>
-	<string name="value_3600">3600</string>
-	
-	<string name="subtitle_streaming_live">Live data stream</string>
-	<string name="title_run_tests">Application Tests</string>
-	<string name="subtitle_run_tests">%1$d tests</string>
-	<string name="subtitle_run_tests_single">1 test</string>
-	
-	<string name="name_test_test">JUnit Tests</string>
-	<string name="name_service_test">Android Service Tests</string>
-	<string name="name_trigger_test">Trigger Tests</string>
-	<string name="name_encryption_test">Encryption Tests</string>
-	<string name="name_probe_test">Probe Tests</string>
-	<string name="name_event_log_test">Event Log Tests</string>
-	<string name="name_upload_test">Upload Plugin Tests</string>
-	<string name="name_http_server_test">HTTP Server Tests</string>
-	<string name="name_scheme_test">Scheme Tests</string>
-	<string name="name_javascript_test">JavaScript Tests</string>
-	<string name="name_javascript_probe_config_test">JavaScript Probe Configuration Tests</string>
-	<string name="name_models_test">Models Tests</string>
-	<string name="name_date_trigger_test">Date Trigger Tests</string>
-	<string name="name_half_hour_date_trigger_test">Half-Hour Date Trigger Tests</string>
-	<string name="name_repeating_date_trigger_test">Repeating Date Trigger Tests</string>
-	<string name="name_random_date_trigger_test">Random Date Trigger Tests</string>
-	<string name="name_accelerometer_probe_test">Basic Accelerometer Probe Tests</string>
-	<string name="name_health_probe_test">Basic Purple Robot Health Probe Tests</string>
-	<string name="name_weka_tree_model_test">Weka Tree Model Tests</string>
-	<string name="name_non_ascii_dialog_test">Non-ASCII Dialog Tests</string>
-	<string name="name_notification_test">Notification Tests</string>
-	<string name="name_local_log_server_test">Local Logging Tests</string>
-	<string name="menu_test_label">Start Tests</string>
-	<string name="name_matlab_tree_model_test">Matlab Tree Model Tests</string>
-	<string name="name_matlab_forest_model_test">Matlab Forest Model Tests</string>
-	<string name="name_user_id_test">User ID Tests</string>
-	<string name="name_snapshot_test">Snapshot Tests</string>
-	<string name="name_local_http_server_test">Local HTTP Server Tests</string>
-			
-	<string name="title_tests_successful">All Tests Passed</string>
-	<string name="message_tests_successful">All tests passed successfully.</string>
-	<string name="action_close">Close</string>
 
-	<string name="title_tests_failed">%1$d Tests Failed</string>
-	<string name="title_test_failed">1 Test Failed</string>
-	<string name="title_running_tests">Running Tests&#8230;</string>
-		
-	<string name="subtitle_minute_or_less_test">Test time: a minute or less (%1$d tests)</string>
-	<string name="subtitle_minute_or_less_test_single">Test time: a minute or less (1 test)</string>
-	<string name="subtitle_minutes_test">Test time: %2$d minutes (%1$d tests)</string>
-	<string name="subtitle_minutes_test_single">Test time: %1$d minutes (1 test)</string>
+    <string name="value_zero">0</string>
+    <string name="value_four">4</string>
+    <string name="value_sixty">60</string>
+    <string name="value_256k">262114</string>
+    <string name="value_300">300</string>
+    <string name="value_600">600</string>
+    <string name="value_3600">3600</string>
+
+    <string name="subtitle_streaming_live">Live data stream</string>
+    <string name="title_run_tests">Application Tests</string>
+    <string name="subtitle_run_tests">%1$d tests</string>
+    <string name="subtitle_run_tests_single">1 test</string>
+
+    <string name="name_test_test">JUnit Tests</string>
+    <string name="name_service_test">Android Service Tests</string>
+    <string name="name_trigger_test">Trigger Tests</string>
+    <string name="name_encryption_test">Encryption Tests</string>
+    <string name="name_probe_test">Probe Tests</string>
+    <string name="name_event_log_test">Event Log Tests</string>
+    <string name="name_upload_test">Upload Plugin Tests</string>
+    <string name="name_http_server_test">HTTP Server Tests</string>
+    <string name="name_scheme_test">Scheme Tests</string>
+    <string name="name_javascript_test">JavaScript Tests</string>
+    <string name="name_javascript_probe_config_test">JavaScript Probe Configuration Tests</string>
+    <string name="name_models_test">Models Tests</string>
+    <string name="name_date_trigger_test">Date Trigger Tests</string>
+    <string name="name_half_hour_date_trigger_test">Half-Hour Date Trigger Tests</string>
+    <string name="name_repeating_date_trigger_test">Repeating Date Trigger Tests</string>
+    <string name="name_random_date_trigger_test">Random Date Trigger Tests</string>
+    <string name="name_accelerometer_probe_test">Basic Accelerometer Probe Tests</string>
+    <string name="name_health_probe_test">Basic Purple Robot Health Probe Tests</string>
+    <string name="name_weka_tree_model_test">Weka Tree Model Tests</string>
+    <string name="name_non_ascii_dialog_test">Non-ASCII Dialog Tests</string>
+    <string name="name_notification_test">Notification Tests</string>
+    <string name="name_local_log_server_test">Local Logging Tests</string>
+    <string name="menu_test_label">Start Tests</string>
+    <string name="name_matlab_tree_model_test">Matlab Tree Model Tests</string>
+    <string name="name_matlab_forest_model_test">Matlab Forest Model Tests</string>
+    <string name="name_user_id_test">User ID Tests</string>
+    <string name="name_snapshot_test">Snapshot Tests</string>
+    <string name="name_local_http_server_test">Local HTTP Server Tests</string>
+
+    <string name="title_tests_successful">All Tests Passed</string>
+    <string name="message_tests_successful">All tests passed successfully.</string>
+    <string name="action_close">Close</string>
+
+    <string name="title_tests_failed">%1$d Tests Failed</string>
+    <string name="title_test_failed">1 Test Failed</string>
+    <string name="title_running_tests">Running Tests&#8230;</string>
+
+    <string name="subtitle_minute_or_less_test">Test time: a minute or less (%1$d tests)</string>
+    <string name="subtitle_minute_or_less_test_single">Test time: a minute or less (1 test)</string>
+    <string name="subtitle_minutes_test">Test time: %2$d minutes (%1$d tests)</string>
+    <string name="subtitle_minutes_test_single">Test time: %1$d minutes (1 test)</string>
 
     <string name="summary_fitbit_beta">Fitbit Intervals: %1$d samples</string>
-	<string name="description_minutes_test">Test time: %1$d minutes</string>
-	<string name="description_minute_or_less_test">Test time: 1 minute or less</string>
-	<string name="subtitle_no_tests">Please select one or more tests</string>
-	
-	<string name="message_starting_test">Starting tests&#8230;</string>
-	
-	<string name="error_only_logs_test">Only logs events of type "test_event".</string>
-	
-	<string name="title_touch_events_probe">Touch Events Probe</string>
-	<string name="summary_touch_events_probe_desc">Captures data about user touch interactions.</string>
+    <string name="description_minutes_test">Test time: %1$d minutes</string>
+    <string name="description_minute_or_less_test">Test time: 1 minute or less</string>
+    <string name="subtitle_no_tests">Please select one or more tests</string>
+
+    <string name="message_starting_test">Starting tests&#8230;</string>
+
+    <string name="error_only_logs_test">Only logs events of type "test_event".</string>
+
+    <string name="title_touch_events_probe">Touch Events Probe</string>
+    <string name="summary_touch_events_probe_desc">Captures data about user touch interactions.</string>
     <string name="summary_touch_events_probe">%1$d touches, %2$d ms delay</string>
     <string name="summary_touch_events_probe_single">1 touch, %1$d ms delay</string>
-    
+
     <string name="title_sample_probe">Sample Probe</string>
     <string name="summary_sample_probe_desc">An example probe that emits basic audio features to illustrate how to create new probes.</string>
-    
+
     <string name="title_probe_p20_features">P20 Features Probe</string>
     <string name="summary_probe_p20_features">A collection of accelerometer and gyroscope features used by CBITs P20 project.</string>
     <string name="summary_p20_features_probe">%1$d ms processing time</string>
@@ -1469,24 +1469,24 @@
     <string name="title_significant_motion_probe">Significant Motion Probe</string>
     <string name="summary_significant_motion_probe_desc">Generates an event when the device detects sudden motion.</string>
     <string name="summary_significant_motion_probe">Last significant motion: %1$s</string>
-    
+
     <string name="title_nfc_scanner">NFC Tag Scanner</string>
     <string name="subtitle_nfc_scanner">Place your device near the item to scan it.</string>
     <string name="title_nfc_unavailable">NFC Unavailable</string>
     <string name="message_nfc_unavailable">This device does not have the necessary hardware to support NFC scanning.</string>
-    
+
     <string name="label_nfc_current_status">Current Status:</string>
     <string name="label_nfc_looking">Scanning for tags&#8230;</string>
     <string name="label_nfc_found">Tag scanned!</string>
     <string name="label_nfc_tag_id">Tag ID:</string>
     <string name="label_nfc_technologies">Technologies:</string>
-    
+
     <string name="title_nfc_probe">Near Field Communications Probe</string>
     <string name="summary_nfc_probe_desc">Generates readings when NFC tags are scanned.</string>
-    
+
     <string name="summary_nfc_probe">Scanned Tag: %1$s</string>
     <string name="action_scan_nfc">Scan NFC tag</string>
-    
+
     <string name="name_sanity_permissions">Missing Permissions</string>
     <string name="name_sanity_permission_error">Required permissions are missing. Tap here to grant the required permissions.</string>
 
@@ -1501,7 +1501,7 @@
 
     <string name="title_log_heartbeat">Emit Heartbeats</string>
     <string name="summary_log_heartbeat">Generate heartbeat status events on regular intervals.</string>
-    
+
     <string name="config_settings_security">Security &amp; Encryption Options</string>
     <string name="config_preferred_hash_function_label">Preferred Hash Function</string>
     <string name="config_preferred_hash_function_message">Desired cryptographic hash function for protecting sensitive information.</string>
@@ -1674,4 +1674,27 @@
 
     <string name="probe_transmit_mode_label">Data Transmission Mode</string>
     <string name="probe_transmit_mode_summary">Determines how readings from this probe are transmitted to a remote server.</string>
+
+    <string name="title_user_registration">Please fill in the form Below</string>
+
+    <string name="name">Name</string>
+    <string name="prompt_name">Your name</string>
+
+    <string name="age">Age</string>
+    <string name="prompt_age">Your age</string>
+
+    <string name="location">Location</string>
+    <string name="prompt_location">Your location</string>
+
+    <string name="gender">Gender</string>
+    <array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </array>
+
+    <string name="submit">Submit</string>
+
+    <string name="title_user_reg">User Registration</string>
+    <string name="summary_user_reg">User has filled out his or her registration details</string>
+
 </resources>

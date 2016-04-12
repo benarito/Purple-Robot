@@ -270,6 +270,11 @@
       	    android:summary="@string/summary_config_check"
            	android:key="check_scheme_config"
            	android:defaultValue="true"/>
+		<CheckBoxPreference
+			android:title="@string/title_user_reg"
+			android:summary="@string/summary_user_reg"
+			android:key="check_user_registration"
+			android:defaultValue="false"/>
    		<Preference android:title="@string/config_refresh_json_label"
             android:key="config_json_refresh_manually"
             android:defaultValue="@string/value_zero" />
@@ -394,4 +399,5 @@
 			<Preference android:title="@string/title_export_jekyll_site" android:key="config_export_jekyll" />
 		</PreferenceScreen>
 	</PreferenceCategory>
+
 </PreferenceScreen>
