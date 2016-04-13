@@ -1,6 +1,7 @@
 <resources>
     <string name="sensor_upload_url">http://sensor.busaracenterlab.org</string>
     <string name="json_config_url">http://mohrlab.northwestern.edu/robot/</string>
+    <string name="user_registration_url">http://sensor.busaracenterlab.org/register/</string>
     <string name="app_name">Busara Bot</string>
 
     <string name="widget_title">Purple Robot Standard Widget</string>
@@ -1696,5 +1697,9 @@
 
     <string name="title_user_reg">User Registration</string>
     <string name="summary_user_reg">User has filled out his or her registration details</string>
+
+    <string name="error_required">Required Field</string>
+    <string name="error_connection_timed_out">Connection Timed out. Try again</string>
+    <string name="saving_info">Saving Information</string>
 
 </resources>

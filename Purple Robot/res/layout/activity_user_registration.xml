@@ -63,7 +63,9 @@
         android:layout_height="wrap_content"
         android:text="@string/gender"
         android:layout_marginTop="16dp"/>
+
     <Spinner
+        android:id="@+id/spGender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/gender"
