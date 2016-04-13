@@ -128,7 +128,7 @@
 			<CheckBoxPreference
 				android:title="@string/title_streaming_jackson_upload_enabled"
 	           	android:key="config_enable_streaming_jackson_data_server"
-	           	android:defaultValue="false"/>
+	           	android:defaultValue="true"/>
 	        <edu.northwestern.cbits.purple_robot_manager.activities.settings.FlexibleListPreference
 	            android:key="config_streaming_jackson_upload_interval"
 	            android:entries="@array/streaming_jackson_upload_interval_labels"

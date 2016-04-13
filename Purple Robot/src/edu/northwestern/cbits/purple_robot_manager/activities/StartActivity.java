@@ -40,6 +40,7 @@ import edu.northwestern.cbits.purple_robot_manager.EncryptionManager;
 import edu.northwestern.cbits.purple_robot_manager.ManagerService;
 import edu.northwestern.cbits.purple_robot_manager.R;
 import edu.northwestern.cbits.purple_robot_manager.RobotContentProvider;
+import edu.northwestern.cbits.purple_robot_manager.SensorManagement;
 import edu.northwestern.cbits.purple_robot_manager.activities.settings.LegacySettingsActivity;
 import edu.northwestern.cbits.purple_robot_manager.activities.settings.SettingsActivity;
 import edu.northwestern.cbits.purple_robot_manager.activities.settings.SettingsKeys;
@@ -165,6 +166,8 @@ public class StartActivity extends AppCompatActivity
         broadcastManager.registerReceiver(this._receiver, filter);
 
         LegacyJSONConfigFile.getSharedFile(this.getApplicationContext());
+
+        SensorManagement.manageProbes(prefs);
 
         if(!prefs.getBoolean(UserRegistration.PREF_USER_REG, false)) {
             Intent i = new Intent(StartActivity.this, UserRegistration.class);

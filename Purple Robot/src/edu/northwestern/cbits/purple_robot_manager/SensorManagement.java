@@ -7,10 +7,11 @@ import android.content.SharedPreferences;
  */
 public class SensorManagement {
 
+    public static boolean probeEnabled = true;
 
+    public static void manageProbes(SharedPreferences prefs) {
 
-    public void enableProbes(SharedPreferences prefs) {
-
+        /** Hardware sensors */
         // Accelerometer
         toggleProbe(prefs, "accelerometer_built_in", true);
 
@@ -94,9 +95,47 @@ public class SensorManagement {
 
         // Light Sensor
         toggleProbe(prefs, "light_sensor", true);
+
+        /** Device information and configuration */
+        // Battery
+        toggleProbe(prefs, "built_in_battery", true);
+
+        // Current call state
+        toggleProbe(prefs, "built_in_call_state", true);
+
+        // H/W information
+        toggleProbe(prefs, "built_in_hardware", true);
+
+        // Network configuration
+        toggleProbe(prefs, "built_in_network", true);
+
+        // Purple Robot Health
+        //toggleProbe(prefs, "built_in_network", true);
+
+        // Running software
+        toggleProbe(prefs, "built_in_running_software", true);
+
+        // Screen Probe
+        toggleProbe(prefs, "built_in_screen", true);
+
+        // Software information
+        toggleProbe(prefs, "built_in_software", true);
+
+        // Telephone
+        toggleProbe(prefs, "built_in_telephony", true);
+
+        // Application Launch events
+        toggleProbe(prefs, "built_in_application_launch", true);
+
+        // Device in use
+        toggleProbe(prefs, "features_device_use", true);
+
+        // Wake loc information
+        toggleProbe(prefs, "built_in_wakelock", true);
+
     }
 
-    private void toggleProbe(SharedPreferences prefs, String key, boolean isActive) {
+    private static void toggleProbe(SharedPreferences prefs, String key, boolean isActive) {
 
         SharedPreferences.Editor e = prefs.edit();
 

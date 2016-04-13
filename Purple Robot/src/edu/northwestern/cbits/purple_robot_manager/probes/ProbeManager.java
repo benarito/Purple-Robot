@@ -774,7 +774,7 @@ public class ProbeManager
         CheckBoxPreference enabled = new CheckBoxPreference(context);
         enabled.setTitle(R.string.title_preference_probes_enable_probes);
         enabled.setKey("config_probes_enabled");
-        enabled.setDefaultValue(false);
+        enabled.setDefaultValue(true);
 
         globalCategory.addPreference(enabled);
 

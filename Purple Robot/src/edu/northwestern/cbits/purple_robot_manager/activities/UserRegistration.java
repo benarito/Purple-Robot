@@ -70,8 +70,14 @@ public class UserRegistration extends Activity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
+                SharedPreferences.Editor editor = sharedPrefs.edit();
+                editor.putBoolean(PREF_USER_REG, true);
+                editor.commit();
+                Intent i = new Intent(UserRegistration.this, StartActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
+                finish();
             }
         });
     }
@@ -147,7 +153,7 @@ public class UserRegistration extends Activity {
             String status = obj.getString("status");
             String message = obj.getString("message");
             Toast.makeText(this, message, Toast.LENGTH_LONG).show();
-            
+
             if(status.equals("ok")) {
                 SharedPreferences.Editor editor = this.getPreferences(this).edit();
                 editor.putBoolean(PREF_USER_REG, true);
