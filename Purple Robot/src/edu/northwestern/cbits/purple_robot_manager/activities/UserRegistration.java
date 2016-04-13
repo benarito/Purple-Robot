@@ -22,6 +22,8 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -69,17 +71,7 @@ public class UserRegistration extends Activity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences.Editor editor = sharedPrefs.edit();
 
-                editor.putBoolean(PREF_USER_REG, true);
-
-                editor.commit();
-
-                Intent i = new Intent(UserRegistration.this, StartActivity.class);
-                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(i);
-                finish();
             }
         });
     }
@@ -132,7 +124,7 @@ public class UserRegistration extends Activity {
         params.add(new BasicNameValuePair("gender", gender));
         params.add(new BasicNameValuePair("username", EncryptionManager.getInstance().getUserId(this)));
         params.add(new BasicNameValuePair("hashedUsername", EncryptionManager.getInstance().getUserHash(this)));
-        
+
         try {
 
             // http client
@@ -151,9 +143,21 @@ public class UserRegistration extends Activity {
             httpEntity = httpResponse.getEntity();
             response = EntityUtils.toString(httpEntity);
 
-            Toast.makeText(this, response, Toast.LENGTH_LONG)
-                    .show();
-
+            JSONObject obj = new JSONObject(response);
+            String status = obj.getString("status");
+            String message = obj.getString("message");
+            Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+            
+            if(status.equals("ok")) {
+                SharedPreferences.Editor editor = this.getPreferences(this).edit();
+                editor.putBoolean(PREF_USER_REG, true);
+                editor.commit();
+                Intent i = new Intent(UserRegistration.this, StartActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
+                finish();
+            }
 
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -163,6 +167,8 @@ public class UserRegistration extends Activity {
             e.printStackTrace();
             Toast.makeText(this, getString(R.string.error_connection_timed_out), Toast.LENGTH_LONG)
                     .show();
+        } catch(JSONException e) {
+            e.printStackTrace();
         }
 
         dialog.dismiss();
