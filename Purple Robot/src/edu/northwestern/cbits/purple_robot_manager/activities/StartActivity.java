@@ -21,7 +21,6 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -182,7 +181,9 @@ public class StartActivity extends AppCompatActivity
         e.putBoolean("config_probes_enabled", true);
         e.putBoolean("config_enable_streaming_jackson_data_server", true);
         e.putString("config_streaming_jackson_upload_interval", getString(R.string.value_43200));
-
+        e.putBoolean("config_mute_warnings", true);
+        e.putBoolean("config_enable_log_server", true);
+        e.putBoolean("config_restrict_log_wifi", false);
         e.commit();
     }
 
@@ -779,7 +780,7 @@ public class StartActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
-        MenuInflater inflater = this.getMenuInflater();
+        /*MenuInflater inflater = this.getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
 
         if (NfcActivity.canScan(this) == false)
@@ -787,7 +788,7 @@ public class StartActivity extends AppCompatActivity
 
         this._menu = menu;
 
-        this.updateAlertIcon();
+        this.updateAlertIcon();*/
 
         return true;
     }

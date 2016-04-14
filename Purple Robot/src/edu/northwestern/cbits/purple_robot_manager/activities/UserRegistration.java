@@ -140,6 +140,7 @@ public class UserRegistration extends Activity {
          * @param age
          * @param location
          * @param gender
+         * @param nationalId
          */
         private void save(String name, String age, String location, String gender, String nationalId) {
 

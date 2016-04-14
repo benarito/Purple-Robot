@@ -1,98 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context="edu.northwestern.cbits.purple_robot_manager.activities.UserRegistration">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title_user_registration"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:layout_marginBottom="24sp"
-        android:textColor="#a5a5a5"
-        android:layout_gravity="center_horizontal"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name"/>
-    <EditText
-        android:id="@+id/txtName"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/prompt_name"
-        android:inputType="textCapWords"
-        android:textSize="20sp"/>
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:context="edu.northwestern.cbits.purple_robot_manager.activities.UserRegistration">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/national_id"
-        android:layout_marginTop="16dp"/>
-    <EditText
-        android:id="@+id/txtNationalID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/prompt_national_id"
-        android:inputType="number"
-        android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_user_registration"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginBottom="24sp"
+            android:textColor="#a5a5a5"
+            android:layout_gravity="center_horizontal"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/age"
-        android:layout_marginTop="16dp"/>
-    <EditText
-        android:id="@+id/txtAge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/prompt_age"
-        android:inputType="number"
-        android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"/>
+        <EditText
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_name"
+            android:inputType="textCapWords"
+            android:textSize="20sp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/location"
-        android:layout_marginTop="16dp"/>
-    <EditText
-        android:id="@+id/txtLocation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/prompt_location"
-        android:inputType="textCapWords"
-        android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/national_id"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/txtNationalID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_national_id"
+            android:inputType="number"
+            android:textSize="20sp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gender"
-        android:layout_marginTop="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/age"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/txtAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_age"
+            android:inputType="number"
+            android:textSize="20sp"/>
 
-    <Spinner
-        android:id="@+id/spGender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/gender"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            android:layout_marginTop="16dp"/>
+        <EditText
+            android:id="@+id/txtLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt_location"
+            android:inputType="textCapWords"
+            android:textSize="20sp"/>
 
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center_horizontal"
-        android:minWidth="160dp"
-        android:text="@string/submit"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/spGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/gender"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="160dp"
+            android:text="@string/submit"/>
 
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
+

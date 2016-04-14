@@ -1,15 +1,7 @@
 package edu.northwestern.cbits.purple_robot_manager;
 
-import java.util.Date;
-import java.util.HashMap;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
-import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -21,14 +13,17 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
-import android.support.v7.app.NotificationCompat;
 
-import edu.northwestern.cbits.purple_robot_manager.activities.StartActivity;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+
 import edu.northwestern.cbits.purple_robot_manager.http.JsonScriptRequestHandler;
 import edu.northwestern.cbits.purple_robot_manager.http.LocalHttpServer;
 import edu.northwestern.cbits.purple_robot_manager.http.commands.JSONCommand;
 import edu.northwestern.cbits.purple_robot_manager.logging.LogManager;
-import edu.northwestern.cbits.purple_robot_manager.logging.SanityManager;
 import edu.northwestern.cbits.purple_robot_manager.plugins.HttpUploadPlugin;
 import edu.northwestern.cbits.purple_robot_manager.plugins.OutputPlugin;
 import edu.northwestern.cbits.purple_robot_manager.plugins.OutputPluginManager;
@@ -65,7 +60,7 @@ public class PersistentService extends Service
         String title = this.getString(R.string.notify_running_title);
         String message = this.getString(R.string.notify_running);
 
-        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, new Intent(this, StartActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
+        /*PendingIntent contentIntent = PendingIntent.getActivity(this, 0, new Intent(this, StartActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         builder.setContentTitle(title);
@@ -77,7 +72,7 @@ public class PersistentService extends Service
 
         Notification note = builder.build();
 
-        this.startForeground(SanityManager.NOTE_ID, note);
+        this.startForeground(SanityManager.NOTE_ID, note);*/
 
         AlarmManager alarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
 
