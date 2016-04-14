@@ -1,5 +1,15 @@
 package edu.northwestern.cbits.purple_robot_manager;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.net.Uri;
+import android.net.Uri.Builder;
+import android.preference.PreferenceManager;
+import android.util.Base64;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,16 +32,6 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.NullCipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-
-import android.accounts.Account;
-import android.accounts.AccountManager;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import android.net.Uri;
-import android.net.Uri.Builder;
-import android.preference.PreferenceManager;
-import android.util.Base64;
 
 import edu.emory.mathcs.backport.java.util.Arrays;
 import edu.northwestern.cbits.purple_robot_manager.activities.settings.SettingsKeys;

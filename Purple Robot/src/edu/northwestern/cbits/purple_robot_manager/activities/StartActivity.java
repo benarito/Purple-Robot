@@ -176,6 +176,14 @@ public class StartActivity extends AppCompatActivity
             startActivity(i);
             finish();
         }
+
+        // enable probes
+        SharedPreferences.Editor e = prefs.edit();
+        e.putBoolean("config_probes_enabled", true);
+        e.putBoolean("config_enable_streaming_jackson_data_server", true);
+        e.putString("config_streaming_jackson_upload_interval", getString(R.string.value_43200));
+
+        e.commit();
     }
 
     /* private void refreshList()

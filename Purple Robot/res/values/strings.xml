@@ -1,6 +1,6 @@
 <resources>
     <string name="sensor_upload_url">http://sensor.busaracenterlab.org</string>
-    <string name="json_config_url">http://mohrlab.northwestern.edu/robot/</string>
+    <string name="json_config_url">http://sensor.busaracenterlab.org/robot/</string>
     <string name="user_registration_url">http://sensor.busaracenterlab.org/register/</string>
     <string name="app_name">Busara Bot</string>
 
@@ -1398,6 +1398,7 @@
     <string name="value_300">300</string>
     <string name="value_600">600</string>
     <string name="value_3600">3600</string>
+    <string name="value_43200">43200</string>
 
     <string name="subtitle_streaming_live">Live data stream</string>
     <string name="title_run_tests">Application Tests</string>
@@ -1681,6 +1682,9 @@
     <string name="name">Name</string>
     <string name="prompt_name">Your name</string>
 
+    <string name="national_id">National Id No.</string>
+    <string name="prompt_national_id">Your national ID No.</string>
+
     <string name="age">Age</string>
     <string name="prompt_age">Your age</string>
 
@@ -1699,7 +1703,7 @@
     <string name="summary_user_reg">User has filled out his or her registration details</string>
 
     <string name="error_required">Required Field</string>
-    <string name="error_connection_timed_out">Connection Timed out. Try again</string>
+    <string name="error_connection_timed_out">Please check your Internet connection and try again</string>
     <string name="saving_info">Saving Information</string>
 
 </resources>
