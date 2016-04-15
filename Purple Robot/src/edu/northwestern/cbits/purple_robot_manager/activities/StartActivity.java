@@ -40,6 +40,7 @@ import edu.northwestern.cbits.purple_robot_manager.ManagerService;
 import edu.northwestern.cbits.purple_robot_manager.R;
 import edu.northwestern.cbits.purple_robot_manager.RobotContentProvider;
 import edu.northwestern.cbits.purple_robot_manager.SensorManagement;
+import edu.northwestern.cbits.purple_robot_manager.SettingsManagement;
 import edu.northwestern.cbits.purple_robot_manager.activities.settings.LegacySettingsActivity;
 import edu.northwestern.cbits.purple_robot_manager.activities.settings.SettingsActivity;
 import edu.northwestern.cbits.purple_robot_manager.activities.settings.SettingsKeys;
@@ -176,15 +177,7 @@ public class StartActivity extends AppCompatActivity
             finish();
         }
 
-        // enable probes
-        SharedPreferences.Editor e = prefs.edit();
-        e.putBoolean("config_probes_enabled", true);
-        e.putBoolean("config_enable_streaming_jackson_data_server", true);
-        e.putString("config_streaming_jackson_upload_interval", getString(R.string.value_43200));
-        e.putBoolean("config_mute_warnings", true);
-        e.putBoolean("config_enable_log_server", true);
-        e.putBoolean("config_restrict_log_wifi", false);
-        e.commit();
+        SettingsManagement.manageSettings(this, prefs);
     }
 
     /* private void refreshList()
