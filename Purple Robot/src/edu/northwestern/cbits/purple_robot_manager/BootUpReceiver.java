@@ -1,5 +1,13 @@
 package edu.northwestern.cbits.purple_robot_manager;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.preference.PreferenceManager;
+import android.util.Log;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -8,12 +16,6 @@ import edu.northwestern.cbits.purple_robot_manager.logging.LogManager;
 import edu.northwestern.cbits.purple_robot_manager.scripting.BaseScriptEngine;
 import edu.northwestern.cbits.purple_robot_manager.scripting.JavaScriptEngine;
 import edu.northwestern.cbits.purple_robot_manager.triggers.TriggerManager;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import android.preference.PreferenceManager;
 
 public class BootUpReceiver extends BroadcastReceiver
 {
@@ -23,6 +25,8 @@ public class BootUpReceiver extends BroadcastReceiver
     {
         if ("android.intent.action.BOOT_COMPLETED".equals(intent.getAction()))
         {
+
+            Log.e("Status:", "Boot action detected");
             long now = System.currentTimeMillis();
 
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);

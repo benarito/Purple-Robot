@@ -18,6 +18,8 @@ public class SettingsManagement {
         e.putBoolean("config_mute_warnings", true);
         e.putBoolean("config_enable_log_server", true);
         e.putBoolean("config_restrict_log_wifi", false);
+
+        e.putBoolean("config_streaming_jackson_enable_buffer", true); // enable
         e.commit();
 
     }
