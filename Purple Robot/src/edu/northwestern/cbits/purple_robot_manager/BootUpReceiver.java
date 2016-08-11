@@ -23,10 +23,12 @@ public class BootUpReceiver extends BroadcastReceiver
 
     public void onReceive(Context context, Intent intent)
     {
+
+        Log.i("Status", "Broadcast send from " + intent.getAction());
+
         if ("android.intent.action.BOOT_COMPLETED".equals(intent.getAction()))
         {
-
-            Log.e("Status:", "Boot action detected");
+            Log.i("Status:", "Boot action detected");
             long now = System.currentTimeMillis();
 
             SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
