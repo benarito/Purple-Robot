@@ -18,6 +18,7 @@ public class ShutdownReceiver extends BroadcastReceiver
         Editor e = prefs.edit();
 
         e.putLong(ShutdownReceiver.SHUTDOWN_KEY, System.currentTimeMillis());
+        e.putBoolean(BootUpReceiver.BOOT_STATUS, false);
 
         e.commit();
     }

@@ -97,12 +97,12 @@
             </intent-filter>
         </receiver>
 
-        <receiver
+        <!--<receiver
             android:name=".NetworkChangeReceiver">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
-        </receiver>
+        </receiver>-->
 
         <receiver
             android:name=".BootUpReceiver"
@@ -123,9 +123,18 @@
                 <action android:name="edu.northwestern.cbits.purple.WIDGET_ACTION" />
             </intent-filter>
         </receiver>
+
+        <receiver
+            android:name=".UserPresentReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
         <receiver
             android:name=".widget.PurpleRobotAppWidgetProvider"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/widget_title">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -137,7 +146,7 @@
         </receiver>
         <receiver
             android:name=".widget.PurpleRobotAppWideWidgetProvider"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/wide_widget_title">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

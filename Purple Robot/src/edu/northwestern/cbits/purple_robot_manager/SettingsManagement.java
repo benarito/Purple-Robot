@@ -1,7 +1,20 @@
 package edu.northwestern.cbits.purple_robot_manager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.preference.PreferenceManager;
+import android.util.Log;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import edu.northwestern.cbits.purple_robot_manager.config.LegacyJSONConfigFile;
+import edu.northwestern.cbits.purple_robot_manager.logging.LogManager;
+import edu.northwestern.cbits.purple_robot_manager.scripting.BaseScriptEngine;
+import edu.northwestern.cbits.purple_robot_manager.scripting.JavaScriptEngine;
+import edu.northwestern.cbits.purple_robot_manager.triggers.TriggerManager;
 
 /**
  * Created by stephen on 4/15/16.

@@ -20,21 +20,26 @@ import edu.northwestern.cbits.purple_robot_manager.triggers.TriggerManager;
 
 public class NetworkChangeReceiver extends BroadcastReceiver
 {
-    public static final String BOOT_KEY = "system_last_boot";
 
     public void onReceive(Context context, Intent intent)
     {
 
-        if (intent.getAction().equals(ConnectivityManager.CONNECTIVITY_ACTION))
-        {
-            Log.i("Status:", "Boot action detected");
-            long now = System.currentTimeMillis();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        boolean hasBooted = prefs.getBoolean(BootUpReceiver.BOOT_STATUS, false);
+
+        if(hasBooted) return;
+
+        Log.i("Status", "Broadcast send from " + intent.getAction());
+
+        if (ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction()))
+        {
+            long now = System.currentTimeMillis();
 
             Editor e = prefs.edit();
 
             e.putLong(BootUpReceiver.BOOT_KEY, now);
+            e.putBoolean(BootUpReceiver.BOOT_STATUS, true);
 
             e.commit();
 

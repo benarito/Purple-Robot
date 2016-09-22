@@ -20,9 +20,11 @@ import edu.northwestern.cbits.purple_robot_manager.triggers.TriggerManager;
 public class BootUpReceiver extends BroadcastReceiver
 {
     public static final String BOOT_KEY = "system_last_boot";
+    public static final String BOOT_STATUS = "has_system_booted";
 
     public void onReceive(Context context, Intent intent)
     {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         Log.i("Status", "Broadcast send from " + intent.getAction());
 
@@ -31,11 +33,10 @@ public class BootUpReceiver extends BroadcastReceiver
             Log.i("Status:", "Boot action detected");
             long now = System.currentTimeMillis();
 
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-
             Editor e = prefs.edit();
 
             e.putLong(BootUpReceiver.BOOT_KEY, now);
+            e.putBoolean(BootUpReceiver.BOOT_STATUS, true);
 
             e.commit();
 

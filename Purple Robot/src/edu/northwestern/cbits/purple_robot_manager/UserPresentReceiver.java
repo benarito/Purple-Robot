@@ -4,13 +4,12 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.HashMap;
 
 import edu.northwestern.cbits.purple_robot_manager.config.LegacyJSONConfigFile;
 import edu.northwestern.cbits.purple_robot_manager.logging.LogManager;
@@ -18,57 +17,26 @@ import edu.northwestern.cbits.purple_robot_manager.scripting.BaseScriptEngine;
 import edu.northwestern.cbits.purple_robot_manager.scripting.JavaScriptEngine;
 import edu.northwestern.cbits.purple_robot_manager.triggers.TriggerManager;
 
-public class WidgetReceiver extends BroadcastReceiver
+public class UserPresentReceiver extends BroadcastReceiver
 {
+    public static final String BOOT_KEY = "system_last_boot";
+    public static final String BOOT_STATUS = "has_system_booted";
+
     public void onReceive(Context context, Intent intent)
     {
-
-        String action = intent.getStringExtra("widget_action");
-
-        String script = null;
-
-        if ("tap".equals(action))
-            script = intent.getStringExtra("action");
-        else if ("tap_one".equals(action))
-            script = intent.getStringExtra("action_one");
-        else if ("tap_two".equals(action))
-            script = intent.getStringExtra("action_two");
-        else if ("tap_three".equals(action))
-            script = intent.getStringExtra("action_three");
-        else if ("tap_four".equals(action))
-            script = intent.getStringExtra("action_four");
-        else if ("tap_five".equals(action))
-            script = intent.getStringExtra("action_five");
-
-        HashMap<String, Object> payload = new HashMap<>();
-        payload.put("widget_action", action);
-        LogManager.getInstance(context).log("pr_widget_tapped", payload);
-
-        if (script != null)
-        {
-            try
-            {
-                BaseScriptEngine.runScript(context, script);
-            }
-            catch (Exception e)
-            {
-                LogManager.getInstance(context).logException(e);
-            }
-        }
-
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         Log.i("Status", "Broadcast send from " + intent.getAction());
 
-        if ("edu.northwestern.cbits.purple.WIDGET_ACTION".equals(intent.getAction()))
+
+        if (Intent.ACTION_USER_PRESENT.equals(intent.getAction()))
         {
-            Log.i("Status:", "Boot action detected");
             long now = System.currentTimeMillis();
 
-            SharedPreferences.Editor e = prefs.edit();
+            Editor e = prefs.edit();
 
-            e.putLong(BootUpReceiver.BOOT_KEY, now);
-            e.putBoolean(BootUpReceiver.BOOT_STATUS, true);
+            e.putLong(UserPresentReceiver.BOOT_KEY, now);
+            e.putBoolean(UserPresentReceiver.BOOT_STATUS, true);
 
             e.commit();
 
@@ -91,6 +59,5 @@ public class WidgetReceiver extends BroadcastReceiver
         }
 
         ManagerService.setupPeriodicCheck(context);
-
     }
 }
