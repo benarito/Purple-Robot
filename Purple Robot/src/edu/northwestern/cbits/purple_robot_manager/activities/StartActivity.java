@@ -167,8 +167,6 @@ public class StartActivity extends AppCompatActivity
 
         LegacyJSONConfigFile.getSharedFile(this.getApplicationContext());
 
-        SensorManagement.manageProbes(prefs);
-
         if(!prefs.getBoolean(UserRegistration.PREF_USER_REG, false)) {
             Intent i = new Intent(StartActivity.this, UserRegistration.class);
             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -178,6 +176,7 @@ public class StartActivity extends AppCompatActivity
         }
 
         SettingsManagement.manageSettings(this, prefs);
+        SensorManagement.manageProbes(prefs);
     }
 
     /* private void refreshList()
