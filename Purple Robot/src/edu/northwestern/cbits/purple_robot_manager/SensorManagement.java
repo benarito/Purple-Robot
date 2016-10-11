@@ -34,6 +34,8 @@ public class SensorManagement {
         toggleProbe(prefs, "built_in_software", true);
 
         toggleProbe(prefs, "features_device_use", true);
+
+        toggleProbe(prefs, "built_in_audio_features", true);
     }
 
     private static void toggleProbe(SharedPreferences prefs, String key, boolean isActive) {
