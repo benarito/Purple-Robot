@@ -20,7 +20,6 @@ import edu.northwestern.cbits.purple_robot_manager.triggers.TriggerManager;
 public class BootUpReceiver extends BroadcastReceiver
 {
     public static final String BOOT_KEY = "system_last_boot";
-    public static final String BOOT_STATUS = "has_system_booted";
 
     public void onReceive(Context context, Intent intent)
     {
@@ -36,7 +35,6 @@ public class BootUpReceiver extends BroadcastReceiver
             Editor e = prefs.edit();
 
             e.putLong(BootUpReceiver.BOOT_KEY, now);
-            e.putBoolean(BootUpReceiver.BOOT_STATUS, true);
 
             e.commit();
 

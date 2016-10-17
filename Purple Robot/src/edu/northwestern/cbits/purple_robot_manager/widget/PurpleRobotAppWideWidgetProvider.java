@@ -35,7 +35,6 @@ public class PurpleRobotAppWideWidgetProvider extends AppWidgetProvider
             SharedPreferences.Editor e = prefs.edit();
 
             e.putLong(BootUpReceiver.BOOT_KEY, now);
-            e.putBoolean(BootUpReceiver.BOOT_STATUS, true);
 
             e.commit();
 

@@ -68,7 +68,6 @@ public class WidgetReceiver extends BroadcastReceiver
             SharedPreferences.Editor e = prefs.edit();
 
             e.putLong(BootUpReceiver.BOOT_KEY, now);
-            e.putBoolean(BootUpReceiver.BOOT_STATUS, true);
 
             e.commit();
 

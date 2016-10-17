@@ -1,30 +1,5 @@
 package edu.northwestern.cbits.purple_robot_manager.plugins;
 
-import java.io.File;
-import java.math.BigInteger;
-import java.net.SocketException;
-import java.net.SocketTimeoutException;
-import java.net.UnknownHostException;
-import java.security.KeyStore;
-import java.security.MessageDigest;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
-
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.SSLPeerUnverifiedException;
-
-import org.apache.http.conn.ConnectTimeoutException;
-import org.apache.http.conn.HttpHostConnectException;
-import org.apache.http.conn.scheme.PlainSocketFactory;
-import org.apache.http.conn.scheme.Scheme;
-import org.apache.http.conn.scheme.SchemeRegistry;
-import org.apache.http.conn.ssl.SSLSocketFactory;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -44,6 +19,31 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
 
+import org.apache.http.conn.ConnectTimeoutException;
+import org.apache.http.conn.HttpHostConnectException;
+import org.apache.http.conn.scheme.PlainSocketFactory;
+import org.apache.http.conn.scheme.Scheme;
+import org.apache.http.conn.scheme.SchemeRegistry;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.math.BigInteger;
+import java.net.SocketException;
+import java.net.SocketTimeoutException;
+import java.net.UnknownHostException;
+import java.security.KeyStore;
+import java.security.MessageDigest;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLPeerUnverifiedException;
+
 import edu.northwestern.cbits.purple_robot_manager.EncryptionManager;
 import edu.northwestern.cbits.purple_robot_manager.PowerHelper;
 import edu.northwestern.cbits.purple_robot_manager.R;
@@ -51,7 +51,6 @@ import edu.northwestern.cbits.purple_robot_manager.WiFiHelper;
 import edu.northwestern.cbits.purple_robot_manager.activities.StartActivity;
 import edu.northwestern.cbits.purple_robot_manager.logging.LiberalSSLSocketFactory;
 import edu.northwestern.cbits.purple_robot_manager.logging.LogManager;
-import edu.northwestern.cbits.purple_robot_manager.logging.SanityManager;
 import edu.northwestern.cbits.purple_robot_manager.probes.Probe;
 
 @SuppressLint("NewApi")
@@ -68,7 +67,7 @@ public abstract class DataUploadPlugin extends OutputPlugin
     public static final String TRANSMIT_KEY = "TRANSMIT";
 
     public static final String RESTRICT_TO_WIFI = "config_restrict_data_wifi";
-    private static final boolean RESTRICT_TO_WIFI_DEFAULT = true;
+    private static final boolean RESTRICT_TO_WIFI_DEFAULT = false;
     public static final String UPLOAD_URI = "config_data_server_uri";
 
     private static final String RESTRICT_TO_CHARGING = "config_restrict_data_charging";
@@ -104,7 +103,8 @@ public abstract class DataUploadPlugin extends OutputPlugin
 
     public static boolean restrictToWifi(SharedPreferences prefs)
     {
-        try
+        return false;
+        /*try
         {
             return prefs.getBoolean(DataUploadPlugin.RESTRICT_TO_WIFI, DataUploadPlugin.RESTRICT_TO_WIFI_DEFAULT);
         }
@@ -120,7 +120,7 @@ public abstract class DataUploadPlugin extends OutputPlugin
             edit.commit();
 
             return isRestricted;
-        }
+        }*/
     }
 
     public static boolean restrictToCharging(SharedPreferences prefs)

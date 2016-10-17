@@ -26,10 +26,6 @@ public class NetworkChangeReceiver extends BroadcastReceiver
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
-        boolean hasBooted = prefs.getBoolean(BootUpReceiver.BOOT_STATUS, false);
-
-        if(hasBooted) return;
-
         Log.i("Status", "Broadcast send from " + intent.getAction());
 
         if (ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction()))
@@ -39,7 +35,6 @@ public class NetworkChangeReceiver extends BroadcastReceiver
             Editor e = prefs.edit();
 
             e.putLong(BootUpReceiver.BOOT_KEY, now);
-            e.putBoolean(BootUpReceiver.BOOT_STATUS, true);
 
             e.commit();
 
