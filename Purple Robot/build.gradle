@@ -50,6 +50,7 @@ android {
     dependencies {
         compile fileTree(dir: 'libs', include: '*.jar')
 	    wearApp project(':watch')
+        compile 'com.android.support:appcompat-v7:23+'
         compile 'com.squareup.okhttp:okhttp:2.4.0'
         compile 'com.android.support:appcompat-v7:23.3.0'
         compile 'com.android.support:design:23.3.0'

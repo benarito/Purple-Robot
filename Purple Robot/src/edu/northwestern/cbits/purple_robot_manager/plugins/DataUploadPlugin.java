@@ -125,7 +125,8 @@ public abstract class DataUploadPlugin extends OutputPlugin
 
     public static boolean restrictToCharging(SharedPreferences prefs)
     {
-        try
+        return false;
+        /*try
         {
             return prefs.getBoolean(DataUploadPlugin.RESTRICT_TO_CHARGING, DataUploadPlugin.RESTRICT_TO_CHARGING_DEFAULT);
         }
@@ -141,7 +142,7 @@ public abstract class DataUploadPlugin extends OutputPlugin
             edit.commit();
 
             return isRestricted;
-        }
+        }*/
     }
 
     public boolean shouldAttemptUpload(Context context)

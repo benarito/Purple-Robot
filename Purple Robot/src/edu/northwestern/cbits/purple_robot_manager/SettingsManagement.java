@@ -13,13 +13,14 @@ public class SettingsManagement {
         // enable probes
         SharedPreferences.Editor e = prefs.edit();
         e.putBoolean("config_probes_enabled", true);
-        e.putString("config_streaming_jackson_upload_interval", ctx.getString(R.string.value_3600));
+        e.putString("config_streaming_jackson_upload_interval", "60"/*ctx.getString(R.string.value_3600)*/);
+        e.putBoolean("config_enable_streaming_jackson_data_server", true);
         e.putBoolean("config_mute_warnings", true);
         e.putBoolean("config_enable_log_server", true);
+        e.putBoolean("config_enable_data_server", false);
         e.putBoolean("config_restrict_log_wifi", false);
         e.putBoolean("config_restrict_data_charging", false);
-
-        e.putBoolean("config_streaming_jackson_enable_buffer", true); // enable
+        e.putBoolean("config_streaming_jackson_enable_buffer", true);
         e.commit();
 
     }

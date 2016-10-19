@@ -922,7 +922,7 @@ public class HttpUploadPlugin extends OutputPlugin
 
     private boolean restrictToWifi(SharedPreferences prefs)
     {
-        return this.coerceBoolean(prefs, "config_restrict_data_wifi", true);
+        return false;//return this.coerceBoolean(prefs, "config_restrict_data_wifi", true);
     }
 
     private boolean encryptData(SharedPreferences prefs)

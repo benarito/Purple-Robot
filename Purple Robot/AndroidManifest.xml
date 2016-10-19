@@ -207,7 +207,7 @@
             android:name=".activities.StartActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/Theme.AppCompat">
 			           
             <intent-filter>
 				                
