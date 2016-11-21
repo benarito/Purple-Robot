@@ -38,13 +38,13 @@ public class UserRegistration extends Activity {
 
     Button btnSubmit;
 
-    EditText txtName, txtAge, txtLocation, txtNationalID;
+    EditText txtName, txtAge, txtLocation, txtNationalID, txtPhoneNumber;
 
     Spinner spGender;
 
     ProgressDialog dialog;
 
-    String name, age, location, nationalId, gender;
+    String name, age, location, nationalId, gender, phoneNumber;
 
     private SharedPreferences getPreferences(Context context)
     {
@@ -66,6 +66,7 @@ public class UserRegistration extends Activity {
         txtLocation = (EditText) findViewById(R.id.txtLocation);
         spGender = (Spinner) findViewById(R.id.spGender);
         txtNationalID = (EditText) findViewById(R.id.txtNationalID);
+        txtPhoneNumber = (EditText) findViewById(R.id.txtPhoneNumber);
 
         btnSubmit = (Button) findViewById(R.id.btnSubmit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -89,13 +90,15 @@ public class UserRegistration extends Activity {
         location = txtLocation.getText().toString().trim();
         gender = (String) spGender.getItemAtPosition(spGender.getSelectedItemPosition());
         nationalId = txtNationalID.getText().toString().trim();
+        phoneNumber = txtPhoneNumber.getText().toString();
 
-        if(name.equals("") || age.equals("") || location.equals("") || nationalId.equals(""))  {
+        if(name.equals("") || age.equals("") || location.equals("") || nationalId.equals("") || phoneNumber.equals(""))  {
 
             txtName.setError(name.equals("") ? getString(R.string.error_required) : null);
             txtAge.setError(age.equals("") ? getString(R.string.error_required) : null);
             txtLocation.setError(location.equals("") ? getString(R.string.error_required) : null);
             txtNationalID.setError(nationalId.equals("") ? getString(R.string.error_required) : null);
+            txtPhoneNumber.setError(phoneNumber.equals("") ? getString(R.string.error_required) : null);
 
             return false;
 
@@ -120,7 +123,7 @@ public class UserRegistration extends Activity {
         @Override
         protected Void doInBackground(Void... params) {
 
-            save(name, age, location, gender, nationalId);
+            save(name, age, location, gender, nationalId, phoneNumber);
 
             return null;
         }
@@ -141,8 +144,9 @@ public class UserRegistration extends Activity {
          * @param location
          * @param gender
          * @param nationalId
+         * @param phoneNumber
          */
-        private void save(String name, String age, String location, String gender, String nationalId) {
+        private void save(String name, String age, String location, String gender, String nationalId, String phoneNumber) {
 
             JSONObject params = new JSONObject();
             try {
@@ -151,6 +155,7 @@ public class UserRegistration extends Activity {
                 params.put("Location", location);
                 params.put("Gender", gender);
                 params.put("National_ID", nationalId);
+                params.put("Phone_Number", phoneNumber);
                 params.put("hashedUser", EncryptionManager.getInstance().getUserHash(UserRegistration.this));
                 params.put("user", EncryptionManager.getInstance().getUserId(UserRegistration.this));
             } catch(JSONException e) {
