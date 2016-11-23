@@ -40,69 +40,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/national_id"
+            android:text="Secret Code"
             android:layout_marginTop="16dp"/>
         <EditText
-            android:id="@+id/txtNationalID"
+            android:id="@+id/txtSecretCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/prompt_national_id"
-            android:inputType="number"
+            android:hint="Your Secret Code"
+            android:inputType="numberPassword"
             android:textSize="20sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/age"
-            android:layout_marginTop="16dp"/>
-        <EditText
-            android:id="@+id/txtAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_age"
-            android:inputType="number"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Phone Number"
-            android:layout_marginTop="16dp"/>
-        <EditText
-            android:id="@+id/txtPhoneNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Your Phone Number"
-            android:inputType="phone"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/location"
-            android:layout_marginTop="16dp"/>
-        <EditText
-            android:id="@+id/txtLocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_location"
-            android:inputType="textCapWords"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/gender"
-            android:layout_marginTop="16dp"/>
-
-        <Spinner
-            android:id="@+id/spGender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/gender"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"/>
-
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="wrap_content"

@@ -11,7 +11,6 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -38,13 +37,11 @@ public class UserRegistration extends Activity {
 
     Button btnSubmit;
 
-    EditText txtName, txtAge, txtLocation, txtNationalID, txtPhoneNumber;
-
-    Spinner spGender;
+    EditText txtName, txtSecretCode;
 
     ProgressDialog dialog;
 
-    String name, age, location, nationalId, gender, phoneNumber;
+    String name, secretCode;
 
     private SharedPreferences getPreferences(Context context)
     {
@@ -62,11 +59,7 @@ public class UserRegistration extends Activity {
         dialog = new ProgressDialog(this);
 
         txtName = (EditText) findViewById(R.id.txtName);
-        txtAge = (EditText) findViewById(R.id.txtAge);
-        txtLocation = (EditText) findViewById(R.id.txtLocation);
-        spGender = (Spinner) findViewById(R.id.spGender);
-        txtNationalID = (EditText) findViewById(R.id.txtNationalID);
-        txtPhoneNumber = (EditText) findViewById(R.id.txtPhoneNumber);
+        txtSecretCode = (EditText) findViewById(R.id.txtSecretCode);
 
         btnSubmit = (Button) findViewById(R.id.btnSubmit);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -86,19 +79,12 @@ public class UserRegistration extends Activity {
     private boolean validate() {
 
         name = txtName.getText().toString().toString().trim();
-        age = txtAge.getText().toString().trim();
-        location = txtLocation.getText().toString().trim();
-        gender = (String) spGender.getItemAtPosition(spGender.getSelectedItemPosition());
-        nationalId = txtNationalID.getText().toString().trim();
-        phoneNumber = txtPhoneNumber.getText().toString();
+        secretCode = txtSecretCode.getText().toString().trim();
 
-        if(name.equals("") || age.equals("") || location.equals("") || nationalId.equals("") || phoneNumber.equals(""))  {
+        if(name.equals("") || secretCode.equals("") )  {
 
             txtName.setError(name.equals("") ? getString(R.string.error_required) : null);
-            txtAge.setError(age.equals("") ? getString(R.string.error_required) : null);
-            txtLocation.setError(location.equals("") ? getString(R.string.error_required) : null);
-            txtNationalID.setError(nationalId.equals("") ? getString(R.string.error_required) : null);
-            txtPhoneNumber.setError(phoneNumber.equals("") ? getString(R.string.error_required) : null);
+            txtSecretCode.setError(secretCode.equals("") ? getString(R.string.error_required) : null);
 
             return false;
 
@@ -123,7 +109,7 @@ public class UserRegistration extends Activity {
         @Override
         protected Void doInBackground(Void... params) {
 
-            save(name, age, location, gender, nationalId, phoneNumber);
+            save(name, secretCode);
 
             return null;
         }
@@ -140,22 +126,14 @@ public class UserRegistration extends Activity {
         /**
          * Save validated information to Server
          * @param name
-         * @param age
-         * @param location
-         * @param gender
-         * @param nationalId
-         * @param phoneNumber
+         * @param secretCode
          */
-        private void save(String name, String age, String location, String gender, String nationalId, String phoneNumber) {
+        private void save(String name, String secretCode) {
 
             JSONObject params = new JSONObject();
             try {
                 params.put("Name", name);
-                params.put("Age", age);
-                params.put("Location", location);
-                params.put("Gender", gender);
-                params.put("National_ID", nationalId);
-                params.put("Phone_Number", phoneNumber);
+                params.put("Secret_Code", secretCode);
                 params.put("hashedUser", EncryptionManager.getInstance().getUserHash(UserRegistration.this));
                 params.put("user", EncryptionManager.getInstance().getUserId(UserRegistration.this));
             } catch(JSONException e) {
